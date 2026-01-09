@@ -25,7 +25,7 @@ RUN npm install
 
 # Copy and set permissions for entrypoint script
 COPY docker/entrypoint-dev.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
 
 # Generate Prisma client
 RUN npm run db:generate || true

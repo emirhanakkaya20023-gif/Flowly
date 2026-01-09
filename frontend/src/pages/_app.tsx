@@ -7,6 +7,7 @@ import SetupChecker from "@/components/setup/SetupChecker";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
 import AutomationLoader from "@/components/automation/AutomationLoader";
 import ChatProvider from "@/contexts/chat-context";
+import TaskProvider from "@/contexts/task-context";
 import ChatPanel from "@/components/chat/ChatPanel";
 import { Toaster } from "@/components/ui/sonner";
 import { SEO } from "@/components/common/SEO";
@@ -18,10 +19,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <AuthProvider>
         <SetupChecker>
           <ChatProvider>
-            <ProtectedRoute>
-              <Component {...pageProps} />
-            </ProtectedRoute>
-            <ChatPanel />
+            <TaskProvider>
+              <ProtectedRoute>
+                <Component {...pageProps} />
+              </ProtectedRoute>
+              <ChatPanel />
+            </TaskProvider>
           </ChatProvider>
         </SetupChecker>
       </AuthProvider>
