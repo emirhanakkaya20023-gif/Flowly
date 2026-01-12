@@ -10,7 +10,7 @@ export default registerAs('app', () => ({
     allowedHeaders: ['Content-Type', 'Authorization'],
   },
   swagger: {
-    title: 'Taskosaur API',
+    title: 'Flowly API',
     description: 'A comprehensive project management API similar to Jira, Asana, and Monday.com',
     version: '1.0.0',
     path: 'api/docs',

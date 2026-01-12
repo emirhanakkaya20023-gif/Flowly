@@ -2,11 +2,11 @@
 
 ## Our Commitment
 
-We are committed to providing a welcoming, inclusive, and harassment-free experience for everyone who contributes to the Taskosaur open source project, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We are committed to providing a welcoming, inclusive, and harassment-free experience for everyone who contributes to the Flowly open source project, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ## Scope
 
-This Code of Conduct applies to all Taskosaur project spaces, including:
+This Code of Conduct applies to all Flowly project spaces, including:
 - GitHub repository (issues, pull requests, discussions, code reviews)
 - Project documentation and wikis
 - Community discussions and forums

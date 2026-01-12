@@ -1,6 +1,6 @@
-# Taskosaur
+# Flowly
 
-<img src="https://raw.githubusercontent.com/Taskosaur/Taskosaur/main/frontend/public/taskosaur-logo.svg" alt="Taskosaur Logo" width="128">
+<img src="./frontend/public/flowly-logo.svg" alt="Flowly Logo" width="128">
 
 ### Open Source Project Management with Conversational AI Task Execution
 
@@ -10,7 +10,7 @@
 
 *Click to watch: See how Conversational AI Task Execution works in Taskosaur*
 
-Taskosaur is an open source project management platform with conversational AI for task execution in-app. The AI assistant handles project management tasks through natural conversation, from creating tasks to managing workflows directly within the application.
+Flowly is an open source project management platform with conversational AI for task execution in-app. The AI assistant handles project management tasks through natural conversation, from creating tasks to managing workflows directly within the application.
 
 <!-- Badges -->
 
@@ -22,7 +22,7 @@ Taskosaur is an open source project management platform with conversational AI f
 ![Redis](https://img.shields.io/badge/redis-%3E%3D7-red.svg)
 ![AI](https://img.shields.io/badge/AI-Powered-purple.svg)
 
-Taskosaur combines traditional project management features with Conversational AI Task Execution, allowing you to manage projects through natural conversation. Instead of navigating menus and forms, you can create tasks, assign work, and manage workflows by simply describing what you need.
+Flowly combines traditional project management features with Conversational AI Task Execution, allowing you to manage projects through natural conversation. Instead of navigating menus and forms, you can create tasks, assign work, and manage workflows by simply describing what you need.
 
 ## Key Features
 
@@ -59,13 +59,13 @@ Taskosaur combines traditional project management features with Conversational A
 
 ### Docker Setup (Recommended)
 
-The fastest way to get started with Taskosaur is using Docker Compose:
+The fastest way to get started with Flowly is using Docker Compose:
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/Taskosaur/Taskosaur.git taskosaur
-   cd taskosaur
+   git clone https://github.com/emirhanakkaya20023-gif/Flowly.git flowly
+   cd flowly
    ```
 
 2. **Set up environment variables**
@@ -102,8 +102,8 @@ If you prefer to run services locally:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/Taskosaur/Taskosaur.git taskosaur
-   cd taskosaur
+   git clone https://github.com/emirhanakkaya20023-gif/Flowly.git flowly
+   cd flowly
    ```
 
 2. **Install dependencies**
@@ -443,8 +443,8 @@ _Taskosaur is actively under development. The following features represent our p
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/Taskosaur/Taskosaur.git taskosaur
-   cd taskosaur
+   git clone https://github.com/emirhanakkaya20023-gif/Flowly.git flowly
+   cd flowly
    ```
 
 2. **Install dependencies**
@@ -776,11 +776,10 @@ This project is licensed under the Business Source License - see the [LICENSE](L
 
 ## Support
 
-- Email: support@taskosaur.com
-- Discord: [Join our community](https://discord.gg/5cpHUSxePp)
-- Issues: [GitHub Issues](https://github.com/Taskosaur/Taskosaur/issues)
-- Discussions: [GitHub Discussions](https://github.com/Taskosaur/Taskosaur/discussions)
+- Email: emirhanakkaya20023@gmail.com
+- Issues: [GitHub Issues](https://github.com/emirhanakkaya20023-gif/Flowly/issues)
+- Discussions: [GitHub Discussions](https://github.com/emirhanakkaya20023-gif/Flowly/discussions)
 
 ---
 
-Built with love by the Taskosaur team
+Built by Emirhan Akkaya

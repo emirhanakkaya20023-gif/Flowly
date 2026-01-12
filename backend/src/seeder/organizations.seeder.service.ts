@@ -24,10 +24,10 @@ export class OrganizationsSeederService {
 
     const organizationsData = [
       {
-        name: 'Taskosaur Inc.',
-        slug: 'taskosaur-inc',
+        name: 'Flowly Inc.',
+        slug: 'flowly-inc',
         description: 'A comprehensive task management solution for modern teams',
-        website: 'https://taskosaur.com',
+        website: 'https://flowly.com',
         avatar: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=150',
         ownerId: adminUser.id,
         createdBy: adminUser.id,

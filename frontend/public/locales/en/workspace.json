@@ -1,0 +1,16 @@
+{
+  "title": "Workspaces",
+  "overview": "Overview",
+  "newWorkspace": "New Workspace",
+  "editWorkspace": "Edit Workspace",
+  "deleteWorkspace": "Delete Workspace",
+  "workspaceDetails": "Workspace Details",
+  "workspaceName": "Workspace Name",
+  "workspaceDescription": "Workspace Description",
+  "members": "Members",
+  "projects": "Projects",
+  "settings": "Settings",
+  "createWorkspace": "Create workspace",
+  "startOrganizing": "Start organizing your projects",
+  "viewAll": "View all"
+}

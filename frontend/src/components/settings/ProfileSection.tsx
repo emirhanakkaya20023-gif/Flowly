@@ -10,10 +10,12 @@ import { toast } from "sonner";
 import { Button } from "../ui";
 import React from "react";
 import Tooltip from "../common/ToolTip";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function ProfileSection() {
   const [isEditing, setIsEditing] = useState(false);
   const { getCurrentUser, updateUser, uploadFileToS3, getUserById } = useAuth();
+  const { t } = useLanguage();
 
   // Store the current user and profile data
   const [currentUser, setCurrentUser] = useState(null);
@@ -73,7 +75,7 @@ export default function ProfileSection() {
     const file = e.target.files?.[0];
     if (!file) return;
     if (!file.type.startsWith("image/")) {
-      toast.error("Please select a valid image file.");
+      toast.error(t("settings.profile.invalidImageFile"));
       e.target.value = "";
       return;
     }
@@ -87,18 +89,18 @@ export default function ProfileSection() {
     try {
       const uploadResult = await uploadFileToS3(selectedFile, "avatar");
       const updatedUser = await updateUser(currentUser.id, { avatar: uploadResult.key });
-      toast.success("Profile picture updated successfully!");
+      toast.success(t("settings.profile.photoUpdated"));
       setSelectedFile(null);
       setPreviewUrl(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
       // Refresh user's avatar for immediate UI update
       setCurrentUser(updatedUser);
     } catch {
-      toast.error("Failed to upload profile picture. Please try again.");
+      toast.error(t("settings.profile.photoUpdateFailed"));
     } finally {
       setUploadingProfilePic(false);
     }
-  }, [selectedFile, currentUser, uploadFileToS3, updateUser]);
+  }, [selectedFile, currentUser, uploadFileToS3, updateUser, t]);
 
   const handleProfileSubmit = async () => {
     if (!currentUser || fetchingRef.current) return;
@@ -113,12 +115,12 @@ export default function ProfileSection() {
         mobileNumber: profileData.mobileNumber,
         bio: profileData.bio,
       });
-      toast.success("Profile updated successfully!");
+      toast.success(t("settings.profile.profileUpdated"));
       setIsEditing(false);
       // Refresh UI with updated user profile
       setCurrentUser(updatedUser);
     } catch {
-      toast.error("Failed to update profile. Please try again.");
+      toast.error(t("settings.profile.profileUpdateFailed"));
     } finally {
       setLoading(false);
       fetchingRef.current = false;

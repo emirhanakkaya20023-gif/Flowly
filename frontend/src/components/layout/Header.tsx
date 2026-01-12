@@ -5,10 +5,12 @@ import OrganizationSelector from "../header/OrganizationSelector";
 import InvitationManager from "../header/InvitationManager";
 import UserProfileMenu from "../header/UserProfileMenu";
 import NotificationDropdown from "../header/NotificationDropdown";
+import LanguageSelector from "../header/LanguageSelector";
 import { ModeToggle } from "../header/ModeToggle";
 import { useAuth } from "@/contexts/auth-context";
 import { useChatContext } from "@/contexts/chat-context";
 import { useRouter } from "next/router";
+import { useLanguage } from "@/contexts/language-context";
 import {
   HiPlus,
   HiChevronDown,
@@ -31,6 +33,7 @@ import HeaderView from "../ui/mobile/HeaderView";
 
 const LoginButton = () => {
   const router = useRouter();
+  const { t } = useLanguage();
 
   const handleLogin = () => {
     router.push("/login");
@@ -38,7 +41,7 @@ const LoginButton = () => {
 
   return (
     <Button onClick={handleLogin} variant="default" className="header-login-button">
-      Login
+      {t("common.header.login")}
     </Button>
   );
 };
@@ -48,6 +51,7 @@ export default function Header() {
   const { workspaceSlug, projectSlug } = router.query;
   const { getCurrentOrganizationId } = useWorkspaceContext();
   const { getUserAccess } = useAuth();
+  const { t } = useLanguage();
   const [hasAccess, setHasAccess] = useState(false);
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [showNewProjectModal, setShowNewProjectModal] = useState(false);
@@ -242,6 +246,7 @@ export default function Header() {
     {
       component: <InvitationManager userId={currentUser?.id} />,
     },
+    { component: <LanguageSelector /> },
     { component: <ModeToggle /> },
     {
       component: (
@@ -260,6 +265,7 @@ export default function Header() {
           {/* Right Section - Login button only */}
           <div className="justify-end w-full flex items-center space-x-4">
             <LoginButton />
+            <LanguageSelector />
             <ModeToggle />
           </div>
         </div>
@@ -283,7 +289,7 @@ export default function Header() {
                       <DropdownMenuTrigger asChild>
                         <Button variant="default" className="header-create-button">
                           <HiPlus className="size-4" />
-                          <span className="hidden sm:inline">Create</span>
+                          <span className="hidden sm:inline">{t("common.header.create")}</span>
                           <HiChevronDown className="size-4" />
                         </Button>
                       </DropdownMenuTrigger>
@@ -295,7 +301,7 @@ export default function Header() {
                     sideOffset={8}
                   >
                     <div className="header-dropdown-header">
-                      <h3 className="header-dropdown-title">Create New</h3>
+                      <h3 className="header-dropdown-title">{t("common.header.createNew")}</h3>
                     </div>
 
                     <div className="p-2 space-y-1">
@@ -312,9 +318,9 @@ export default function Header() {
                                   <HiCommandLine className="header-dropdown-icon-inner" />
                                 </div>
                                 <div className="header-dropdown-item-content">
-                                  <div className="header-dropdown-item-title">New Workspace</div>
+                                  <div className="header-dropdown-item-title">{t("workspace.newWorkspace")}</div>
                                   <div className="header-dropdown-item-description">
-                                    Create a workspace for your team
+                                    {t("common.header.newWorkspaceDescription")}
                                   </div>
                                 </div>
                               </div>
@@ -332,9 +338,9 @@ export default function Header() {
                               <HiRocketLaunch className="header-dropdown-icon-inner" />
                             </div>
                             <div className="header-dropdown-item-content">
-                              <div className="header-dropdown-item-title">New Project</div>
+                              <div className="header-dropdown-item-title">{t("projects.newProject")}</div>
                               <div className="header-dropdown-item-description">
-                                Start a new project
+                                {t("common.header.newProjectDescription")}
                               </div>
                             </div>
                           </DropdownMenuItem>
@@ -353,9 +359,9 @@ export default function Header() {
                             <HiRocketLaunch className="header-dropdown-icon-inner" />
                           </div>
                           <div className="header-dropdown-item-content">
-                            <div className="header-dropdown-item-title">New Project</div>
+                            <div className="header-dropdown-item-title">{t("projects.newProject")}</div>
                             <div className="header-dropdown-item-description">
-                              Start a new project
+                              {t("common.header.newProjectDescription")}
                             </div>
                           </div>
                         </DropdownMenuItem>
@@ -373,9 +379,9 @@ export default function Header() {
                             <HiPlus className="header-dropdown-icon-inner" />
                           </div>
                           <div className="header-dropdown-item-content">
-                            <div className="header-dropdown-item-title">New Task</div>
+                            <div className="header-dropdown-item-title">{t("tasks.newTask")}</div>
                             <div className="header-dropdown-item-description">
-                              Add a task to this project
+                              {t("common.header.newTaskDescription")}
                             </div>
                           </div>
                         </DropdownMenuItem>

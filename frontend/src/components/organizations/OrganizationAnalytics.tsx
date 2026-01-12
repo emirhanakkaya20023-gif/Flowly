@@ -9,6 +9,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/language-context";
 
 // DnD Imports
 import {
@@ -93,6 +94,7 @@ export function OrganizationAnalytics({ organizationId }: OrganizationAnalyticsP
   } = useOrganization();
   const { createKPISection, createWidgetsSection } = useDashboardSettings();
   const { getTodayAgenda } = useTask();
+  const { t } = useLanguage();
   const [todayTask, setTodayTask] = useState<TasksResponse | null>(null);
   const [showTodayAgenda, setShowTodayAgenda] = useState(false);
 
@@ -130,7 +132,7 @@ export function OrganizationAnalytics({ organizationId }: OrganizationAnalyticsP
       setShowTodayAgenda(true);
     } catch (error) {
       console.error(error);
-      toast.error("Faild to fetch today task data");
+      toast.error(t("dashboard.failedToFetch"));
     }
   };
 
@@ -395,9 +397,9 @@ export function OrganizationAnalytics({ organizationId }: OrganizationAnalyticsP
       return (
         <Card className="p-4 h-full flex items-center justify-center">
           <div className="text-center text-muted-foreground">
-            <p>Failed to load data for {widget.title}</p>
+            <p>{t("dashboard.failedToLoadData")} {widget.title}</p>
             <Button variant="outline" size="sm" onClick={handleFetchData} className="mt-2">
-              Retry
+              {t("dashboard.retry")}
             </Button>
           </div>
         </Card>
@@ -415,7 +417,7 @@ export function OrganizationAnalytics({ organizationId }: OrganizationAnalyticsP
 
   if (error) {
     return (
-      <ErrorState error="Error loading organization analytics:" onRetry={handleFetchData} />
+      <ErrorState error={t("dashboard.errorLoading")} onRetry={handleFetchData} />
     );
   }
 
@@ -429,12 +431,12 @@ export function OrganizationAnalytics({ organizationId }: OrganizationAnalyticsP
         upcomingTasks={todayTask?.tasks || []}
       />
       <PageHeader
-        title="Dashboard"
-        description="Comprehensive insights into your organization's performance and health"
+        title={t("dashboard.title")}
+        description={t("dashboard.description")}
         icon={<HiHome className="size-5" />}
         actions={
           <div className="flex items-center gap-2">
-            <Tooltip content="Today Agenda" position="top" color="primary">
+            <Tooltip content={t("dashboard.todaysAgenda")} position="top" color="primary">
               <ActionButton
                 variant="outline"
                 onClick={() => handleTodayTaskFetch()}
@@ -444,7 +446,7 @@ export function OrganizationAnalytics({ organizationId }: OrganizationAnalyticsP
                 <Calendar className="h-4 w-4" />
               </ActionButton>
             </Tooltip>
-            <Tooltip content="Dashboard Settings" position="left" color="primary">
+            <Tooltip content={t("dashboard.dashboardSettings")} position="left" color="primary">
               <DashboardSettingsDropdown sections={settingSections} />
             </Tooltip>
           </div>

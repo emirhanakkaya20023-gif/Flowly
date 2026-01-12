@@ -1,6 +1,6 @@
-# Contributing to Taskosaur
+# Contributing to Flowly
 
-Thank you for your interest in contributing to Taskosaur! We welcome contributions from the community and are grateful for your help in making this project better.
+Thank you for your interest in contributing to Flowly! We welcome contributions from the community and are grateful for your help in making this project better.
 
 ## Table of Contents
 
@@ -23,8 +23,8 @@ This project and everyone participating in it is governed by our [Code of Conduc
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/Taskosaur/taskosaur.git
-   cd taskosaur
+   git clone https://github.com/emirhanakkaya20023-gif/Flowly.git
+   cd flowly
    ```
 3. **Follow the setup instructions** in the [README.md](README.md)
 4. **Create a branch** for your changes:

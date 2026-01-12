@@ -11,12 +11,14 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { HiBell, HiGlobeAlt } from "react-icons/hi2";
+import { HiBell, HiGlobeAlt, HiLanguage } from "react-icons/hi2";
 import { useAuth } from "@/contexts/auth-context";
+import { useLanguage } from "@/contexts/language-context";
 import { toast } from "sonner";
 
 export default function PreferencesSection() {
   const { getCurrentUser, updateUser } = useAuth();
+  const { language, setLanguage } = useLanguage();
   const currentUser = getCurrentUser();
 
   const fetchingRef = useRef(false);
@@ -124,6 +126,31 @@ export default function PreferencesSection() {
               </Select>
               <p className="text-xs text-[var(--muted-foreground)] mt-1">
                 Used to display dates and times in the local timezone.
+              </p>
+            </div>
+          </div>
+
+          {/* Language */}
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <HiLanguage className="w-4 h-4 text-[var(--primary)]" />
+              <Label className="text-sm font-medium text-[var(--foreground)]">Language</Label>
+            </div>
+            <div className="max-w-md">
+              <Select
+                value={language}
+                onValueChange={(value) => setLanguage(value)}
+              >
+                <SelectTrigger className="h-8 border-none bg-[var(--background)]">
+                  <SelectValue placeholder="Select your language" />
+                </SelectTrigger>
+                <SelectContent className="border-none bg-[var(--card)]">
+                  <SelectItem value="en">English</SelectItem>
+                  <SelectItem value="tr">Türkçe</SelectItem>
+                </SelectContent>
+              </Select>
+              <p className="text-xs text-[var(--muted-foreground)] mt-1">
+                Select your preferred language for the interface.
               </p>
             </div>
           </div>

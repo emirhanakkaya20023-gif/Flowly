@@ -1,0 +1,61 @@
+{
+  "buttons": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "create": "Oluştur",
+    "update": "Güncelle",
+    "close": "Kapat",
+    "submit": "Gönder",
+    "back": "Geri",
+    "next": "İleri",
+    "finish": "Bitir",
+    "confirm": "Onayla",
+    "loading": "Yükleniyor..."
+  },
+  "navigation": {
+    "dashboard": "Panel",
+    "workspaces": "Çalışma Alanları",
+    "projects": "Projeler",
+    "tasks": "Görevler",
+    "activities": "Aktiviteler",
+    "calendar": "Takvim",
+    "settings": "Ayarlar",
+    "logout": "Çıkış Yap",
+    "profile": "Profil"
+  },
+  "common": {
+    "search": "Ara",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "actions": "İşlemler",
+    "status": "Durum",
+    "priority": "Öncelik",
+    "dueDate": "Bitiş Tarihi",
+    "assignee": "Atanan Kişi",
+    "description": "Açıklama",
+    "title": "Başlık",
+    "name": "Ad",
+    "email": "E-posta",
+    "password": "Şifre",
+    "loading": "Yükleniyor...",
+    "noResults": "Sonuç bulunamadı",
+    "error": "Bir hata oluştu",
+    "success": "Başarılı"
+  },
+  "validation": {
+    "required": "Bu alan zorunludur",
+    "invalidEmail": "Geçersiz e-posta adresi",
+    "passwordTooShort": "Şifre en az 8 karakter olmalıdır",
+    "passwordsDoNotMatch": "Şifreler eşleşmiyor"
+  },
+  "header": {
+    "login": "Giriş Yap",
+    "create": "Oluştur",
+    "createNew": "Yeni Oluştur",
+    "newWorkspaceDescription": "Ekibiniz için bir çalışma alanı oluşturun",
+    "newProjectDescription": "Yeni bir proje başlatın",
+    "newTaskDescription": "Bu projeye bir görev ekleyin"
+  }
+}

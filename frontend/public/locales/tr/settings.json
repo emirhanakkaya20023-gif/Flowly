@@ -1,0 +1,72 @@
+{
+  "preferences": {
+    "title": "Tercihler",
+    "subtitle": "Hesap tercihlerinizi yönetin",
+    "timezone": "Saat Dilimi",
+    "timezoneDescription": "Saat diliminizi seçin",
+    "language": "Dil",
+    "languageDescription": "Tercih ettiğiniz dili seçin",
+    "saveChanges": "Değişiklikleri Kaydet",
+    "saving": "Kaydediliyor...",
+    "changesSaved": "Değişiklikler başarıyla kaydedildi"
+  },
+  "profile": {
+    "title": "Profil",
+    "subtitle": "Profil bilgilerinizi yönetin",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "email": "E-posta",
+    "bio": "Biyografi",
+    "avatar": "Avatar",
+    "username": "Kullanıcı Adı",
+    "mobileNumber": "Telefon Numarası",
+    "editProfile": "Profili Düzenle",
+    "uploadPhoto": "Fotoğraf Yükle",
+    "cancel": "İptal",
+    "save": "Değişiklikleri Kaydet",
+    "profileUpdated": "Profil başarıyla güncellendi!",
+    "profileUpdateFailed": "Profil güncellenemedi. Lütfen tekrar deneyin.",
+    "photoUpdated": "Profil fotoğrafı başarıyla güncellendi!",
+    "photoUpdateFailed": "Profil fotoğrafı yüklenemedi. Lütfen tekrar deneyin.",
+    "invalidImageFile": "Lütfen geçerli bir resim dosyası seçin."
+  },
+  "ai": {
+    "title": "AI Ayarları",
+    "subtitle": "AI asistan ayarlarını yapılandırın",
+    "enabled": "AI Asistanı Etkinleştir",
+    "apiKey": "API Anahtarı",
+    "apiKeyPlaceholder": "API anahtarınızı girin",
+    "model": "Model",
+    "modelPlaceholder": "örn: deepseek/deepseek-chat-v3-0324:free",
+    "apiUrl": "API URL",
+    "apiUrlPlaceholder": "örn: https://openrouter.ai/api/v1",
+    "show": "Göster",
+    "hide": "Gizle",
+    "save": "Ayarları Kaydet",
+    "saving": "Kaydediliyor...",
+    "settingsSaved": "AI ayarları başarıyla kaydedildi!",
+    "settingsFailed": "AI ayarları kaydedilemedi",
+    "loadFailed": "AI ayarları yüklenemedi"
+  },
+  "email": {
+    "title": "E-posta Ayarları",
+    "subtitle": "E-posta tercihlerinizi yönetin",
+    "currentEmail": "Mevcut E-posta",
+    "newEmail": "Yeni E-posta",
+    "save": "E-postayı Güncelle"
+  },
+  "password": {
+    "title": "Şifre Sıfırlama",
+    "subtitle": "Hesap şifrenizi değiştirin",
+    "currentPassword": "Mevcut Şifre",
+    "newPassword": "Yeni Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "save": "Şifreyi Güncelle"
+  },
+  "dangerZone": {
+    "title": "Tehlikeli Bölge",
+    "subtitle": "Geri alınamaz ve yıkıcı işlemler",
+    "deleteAccount": "Hesabı Sil",
+    "deleteAccountDescription": "Hesabınızı ve tüm verilerinizi kalıcı olarak silin"
+  }
+}

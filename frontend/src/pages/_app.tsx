@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import AuthProvider from "@/contexts/auth-context";
+import LanguageProvider from "@/contexts/language-context";
 import SetupChecker from "@/components/setup/SetupChecker";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
 import AutomationLoader from "@/components/automation/AutomationLoader";
@@ -17,16 +18,18 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <SEO />
       <AuthProvider>
-        <SetupChecker>
-          <ChatProvider>
-            <TaskProvider>
-              <ProtectedRoute>
-                <Component {...pageProps} />
-              </ProtectedRoute>
-              <ChatPanel />
-            </TaskProvider>
-          </ChatProvider>
-        </SetupChecker>
+        <LanguageProvider>
+          <SetupChecker>
+            <ChatProvider>
+              <TaskProvider>
+                <ProtectedRoute>
+                  <Component {...pageProps} />
+                </ProtectedRoute>
+                <ChatPanel />
+              </TaskProvider>
+            </ChatProvider>
+          </SetupChecker>
+        </LanguageProvider>
       </AuthProvider>
       <AutomationLoader
         showDevPanel={process.env.NODE_ENV === "development"}

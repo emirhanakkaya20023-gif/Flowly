@@ -1,0 +1,23 @@
+{
+  "title": "Projects",
+  "newProject": "New Project",
+  "editProject": "Edit Project",
+  "deleteProject": "Delete Project",
+  "projectDetails": "Project Details",
+  "projectName": "Project Name",
+  "projectDescription": "Project Description",
+  "members": "Members",
+  "addMember": "Add Member",
+  "tasks": "Tasks",
+  "settings": "Settings",
+  "overview": "Overview",
+  "createProject": "Create a project",
+  "startBuilding": "Start building something amazing",
+  "noProjects": "No projects yet",
+  "getStarted": "Get started by creating your first project",
+  "viewAll": "View all",
+  "allProjects": "All Projects",
+  "myProjects": "My Projects",
+  "calendar": "Calendar",
+  "sprints": "Sprints"
+}

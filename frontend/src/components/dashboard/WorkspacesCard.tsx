@@ -4,6 +4,7 @@ import { HiFolder } from "react-icons/hi2";
 import { InfoPanel } from "../common/InfoPanel";
 import ActionButton from "@/components/common/ActionButton";
 import NewWorkspaceDialog from "../workspace/NewWorkspaceDialogProps";
+import { useLanguage } from "@/contexts/language-context";
 
 interface Workspace {
   id: string;
@@ -27,18 +28,24 @@ interface WorkspacesCardProps {
 }
 
 export function WorkspacesCard({
-  title = "Workspaces",
+  title,
   subtitle,
   workspaces,
   maxDisplay = 3,
-  emptyStateConfig = {
-    title: "Create workspace",
-    description: "Start organizing your projects",
-    buttonText: "New Workspace",
-    buttonHref: "/workspaces/new",
-  },
+  emptyStateConfig,
 }: WorkspacesCardProps) {
   const [showNewWorkspaceDialog, setShowNewWorkspaceDialog] = useState(false);
+  const { t } = useLanguage();
+
+  // Set default values using translations
+  const displayTitle = title || t("workspace.title");
+  const defaultEmptyConfig = {
+    title: t("workspace.createWorkspace"),
+    description: t("workspace.startOrganizing"),
+    buttonText: t("workspace.newWorkspace"),
+    buttonHref: "/workspaces/new",
+  };
+  const emptyConfig = emptyStateConfig || defaultEmptyConfig;
   const renderWorkspaceContent = () => {
     if (workspaces && workspaces.length > 0) {
       return (
@@ -77,13 +84,13 @@ export function WorkspacesCard({
           <HiFolder className="w-5 h-5 text-[var(--muted-foreground)]" />
         </div>
         <p className="text-sm font-medium text-[var(--accent-foreground)] mb-1">
-          {emptyStateConfig.title}
+          {emptyConfig.title}
         </p>
         <p className="text-xs text-[var(--muted-foreground)] mb-3">
-          {emptyStateConfig.description}
+          {emptyConfig.description}
         </p>
         <ActionButton onClick={() => setShowNewWorkspaceDialog(true)} primary showPlusIcon>
-          {emptyStateConfig.buttonText}
+          {emptyConfig.buttonText}
         </ActionButton>
       </div>
     );
@@ -91,7 +98,7 @@ export function WorkspacesCard({
 
   return (
     <>
-      <InfoPanel title={title} subtitle={subtitle} viewAllHref="/workspaces" viewAllText="View all">
+      <InfoPanel title={displayTitle} subtitle={subtitle} viewAllHref="/workspaces" viewAllText={t("workspace.viewAll")}>
         {renderWorkspaceContent()}
       </InfoPanel>
 

@@ -1,0 +1,35 @@
+{
+  "title": "Tasks",
+  "newTask": "New Task",
+  "editTask": "Edit Task",
+  "deleteTask": "Delete Task",
+  "taskDetails": "Task Details",
+  "assignTo": "Assign to",
+  "dueDate": "Due Date",
+  "priority": "Priority",
+  "status": "Status",
+  "description": "Description",
+  "attachments": "Attachments",
+  "comments": "Comments",
+  "addComment": "Add a comment",
+  "taskName": "Task Name",
+  "noTasks": "No tasks yet",
+  "createFirstTask": "Create your first task to get started",
+  "allTasks": "All Tasks",
+  "myTasks": "My Tasks",
+  "completedTasks": "Completed Tasks",
+  "viewAll": "View all",
+  "priorities": {
+    "lowest": "Lowest",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "highest": "Highest"
+  },
+  "statuses": {
+    "todo": "To Do",
+    "inProgress": "In Progress",
+    "done": "Done",
+    "blocked": "Blocked"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Panel",
+  "welcome": "Tekrar hoş geldiniz",
+  "overview": "Genel Bakış",
+  "recentActivity": "Son Aktiviteler",
+  "myTasks": "Görevlerim",
+  "upcomingDeadlines": "Yaklaşan Son Tarihler",
+  "projects": "Projeler",
+  "workspaces": "Çalışma Alanları",
+  "greeting": {
+    "morning": "Günaydın",
+    "afternoon": "İyi günler",
+    "evening": "İyi akşamlar"
+  },
+  "readyMessage": "Hedeflerinize ulaşmaya hazır mısınız?",
+  "todaysAgenda": "Bugünün Gündemi",
+  "description": "Kuruluşunuzun performansı ve sağlığı hakkında kapsamlı bilgiler",
+  "dashboardSettings": "Panel Ayarları",
+  "failedToFetch": "Bugünün görev verileri alınamadı",
+  "failedToLoadData": "Veri yüklenemedi:",
+  "retry": "Tekrar Dene",
+  "errorLoading": "Organizasyon analitiği yüklenirken hata oluştu",
+  "stats": {
+    "totalTasks": "Toplam Görevler",
+    "completedTasks": "Tamamlanan Görevler",
+    "inProgress": "Devam Edenler",
+    "overdue": "Gecikmiş"
+  }
+}

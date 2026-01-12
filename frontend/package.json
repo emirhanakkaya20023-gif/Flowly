@@ -1,11 +1,11 @@
 {
-  "name": "@taskosaur/frontend",
+  "name": "@flowly/frontend",
   "version": "0.1.0",
-  "description": "Taskosaur Frontend - Next.js Application",
-  "author": "Taskosaur Team",
+  "description": "Flowly Frontend - Next.js Application",
+  "author": "Emirhan Akkaya",
   "type": "module",
   "private": true,
-  "license": "SEE LICENSE IN https://github.com/Taskosaur/Taskosaur/blob/main/LICENSE.md",
+  "license": "MIT",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",

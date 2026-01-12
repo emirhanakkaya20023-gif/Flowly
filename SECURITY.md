@@ -11,7 +11,7 @@ We release patches for security vulnerabilities in the following versions:
 
 ## Reporting a Vulnerability
 
-The Taskosaur team takes security bugs seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
+The Flowly team takes security bugs seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
 ### How to Report a Security Vulnerability
 
@@ -20,7 +20,7 @@ The Taskosaur team takes security bugs seriously. We appreciate your efforts to 
 Instead, please report them using one of the following methods:
 
 #### 1. Email (Preferred)
-Send an email to: **security@taskosaur.com**
+Send an email to: **emirhanakkaya20023@gmail.com**
 
 Include the following information:
 - Type of issue (e.g., buffer overflow, SQL injection, cross-site scripting, etc.)

@@ -149,8 +149,8 @@ export function SetupForm() {
         <div className="setup-mobile-logo">
           <div className="setup-mobile-logo-icon">
             <Image
-              src="/taskosaur-logo.svg"
-              alt="Taskosaur Logo"
+              src="/flowly-logo.svg"
+              alt="Flowly Logo"
               width={50}
               height={50}
               className={`size-10 ${
@@ -167,7 +167,7 @@ export function SetupForm() {
           <h1 className="setup-form-title">
             <div className="md:hidden">
               Welcome to
-              <span className="flex items-center justify-center">Taskosaur</span>
+              <span className="flex items-center justify-center">Flowly</span>
             </div>
             <span className="hidden md:block">First-Time Setup</span>
           </h1>
@@ -391,7 +391,7 @@ export function SetupForm() {
         className="setup-footer"
       >
         <p className="setup-footer-text">
-          This will create the first administrative user for your Taskosaur instance.
+          This will create the first administrative user for your Flowly instance.
         </p>
       </motion.div>
     </motion.div>

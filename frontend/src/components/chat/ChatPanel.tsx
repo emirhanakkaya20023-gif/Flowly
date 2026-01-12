@@ -465,7 +465,7 @@ export default function ChatPanel() {
                     <HiSparkles className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-primary mb-2">
-                    Hi! I'm your Taskosaur AI Assistant
+                    Hi! I'm your Flowly AI Assistant
                   </h3>
                   <p className="text-sm mb-4 text-gray-600 dark:text-gray-400">
                     I can help you manage tasks, projects, and workspaces

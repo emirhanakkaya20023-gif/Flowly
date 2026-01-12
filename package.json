@@ -1,10 +1,10 @@
 {
-    "name": "@taskosaur/platform",
+    "name": "@flowly/platform",
     "version": "0.1.0",
-    "description": "Taskosaur Platform - Open Source Project Management with Conversational AI Task Execution",
-    "author": "Taskosaur Team",
+    "description": "Flowly Platform - Open Source Project Management with Conversational AI Task Execution",
+    "author": "Emirhan Akkaya",
     "private": true,
-    "license": "SEE LICENSE IN https://github.com/Taskosaur/Taskosaur/blob/main/LICENSE.md",
+    "license": "MIT",
     "workspaces": [
         "frontend",
         "backend"

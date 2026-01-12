@@ -1,0 +1,61 @@
+{
+  "buttons": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "close": "Close",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish",
+    "confirm": "Confirm",
+    "loading": "Loading..."
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "workspaces": "Workspaces",
+    "projects": "Projects",
+    "tasks": "Tasks",
+    "activities": "Activities",
+    "calendar": "Calendar",
+    "settings": "Settings",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "common": {
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "actions": "Actions",
+    "status": "Status",
+    "priority": "Priority",
+    "dueDate": "Due Date",
+    "assignee": "Assignee",
+    "description": "Description",
+    "title": "Title",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "error": "An error occurred",
+    "success": "Success"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "passwordsDoNotMatch": "Passwords do not match"
+  },
+  "header": {
+    "login": "Login",
+    "create": "Create",
+    "createNew": "Create New",
+    "newWorkspaceDescription": "Create a workspace for your team",
+    "newProjectDescription": "Start a new project",
+    "newTaskDescription": "Add a task to this project"
+  }
+}

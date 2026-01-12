@@ -1,0 +1,72 @@
+{
+  "preferences": {
+    "title": "Preferences",
+    "subtitle": "Manage your account preferences",
+    "timezone": "Timezone",
+    "timezoneDescription": "Select your timezone",
+    "language": "Language",
+    "languageDescription": "Select your preferred language",
+    "saveChanges": "Save Changes",
+    "saving": "Saving...",
+    "changesSaved": "Changes saved successfully"
+  },
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Manage your profile information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "bio": "Bio",
+    "avatar": "Avatar",
+    "username": "Username",
+    "mobileNumber": "Mobile Number",
+    "editProfile": "Edit Profile",
+    "uploadPhoto": "Upload Photo",
+    "cancel": "Cancel",
+    "save": "Save Changes",
+    "profileUpdated": "Profile updated successfully!",
+    "profileUpdateFailed": "Failed to update profile. Please try again.",
+    "photoUpdated": "Profile picture updated successfully!",
+    "photoUpdateFailed": "Failed to upload profile picture. Please try again.",
+    "invalidImageFile": "Please select a valid image file."
+  },
+  "ai": {
+    "title": "AI Settings",
+    "subtitle": "Configure AI assistant settings",
+    "enabled": "Enable AI Assistant",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "Enter your API key",
+    "model": "Model",
+    "modelPlaceholder": "e.g., deepseek/deepseek-chat-v3-0324:free",
+    "apiUrl": "API URL",
+    "apiUrlPlaceholder": "e.g., https://openrouter.ai/api/v1",
+    "show": "Show",
+    "hide": "Hide",
+    "save": "Save Settings",
+    "saving": "Saving...",
+    "settingsSaved": "AI settings saved successfully!",
+    "settingsFailed": "Failed to save AI settings",
+    "loadFailed": "Failed to load AI settings"
+  },
+  "email": {
+    "title": "Email Settings",
+    "subtitle": "Manage your email preferences",
+    "currentEmail": "Current Email",
+    "newEmail": "New Email",
+    "save": "Update Email"
+  },
+  "password": {
+    "title": "Reset Password",
+    "subtitle": "Change your account password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "save": "Update Password"
+  },
+  "dangerZone": {
+    "title": "Danger Zone",
+    "subtitle": "Irreversible and destructive actions",
+    "deleteAccount": "Delete Account",
+    "deleteAccountDescription": "Permanently delete your account and all data"
+  }
+}

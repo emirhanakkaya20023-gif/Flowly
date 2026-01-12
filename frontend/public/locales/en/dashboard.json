@@ -1,0 +1,29 @@
+{
+  "title": "Dashboard",
+  "welcome": "Welcome back",
+  "overview": "Overview",
+  "recentActivity": "Recent Activity",
+  "myTasks": "My Tasks",
+  "upcomingDeadlines": "Upcoming Deadlines",
+  "projects": "Projects",
+  "workspaces": "Workspaces",
+  "greeting": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening"
+  },
+  "readyMessage": "Ready to tackle your goals?",
+  "todaysAgenda": "Today's Agenda",
+  "description": "Comprehensive insights into your organization's performance and health",
+  "dashboardSettings": "Dashboard Settings",
+  "failedToFetch": "Failed to fetch today's task data",
+  "failedToLoadData": "Failed to load data for",
+  "retry": "Retry",
+  "errorLoading": "Error loading organization analytics",
+  "stats": {
+    "totalTasks": "Total Tasks",
+    "completedTasks": "Completed Tasks",
+    "inProgress": "In Progress",
+    "overdue": "Overdue"
+  }
+}

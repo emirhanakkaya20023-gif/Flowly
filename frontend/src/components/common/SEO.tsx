@@ -5,11 +5,11 @@ interface SEOProps {
   description?: string;
 }
 
-export const SEO = ({ 
-  title, 
-  description = "Taskosaur - Modern, AI-powered task management for productive teams.",
+export const SEO = ({
+  title,
+  description = "Flowly - Modern, AI-powered task management for productive teams.",
 }: SEOProps) => {
-  const siteTitle = "Taskosaur";
+  const siteTitle = "Flowly";
   const displayTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 
   return (

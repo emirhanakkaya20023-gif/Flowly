@@ -2,6 +2,8 @@ import ActionButton from "@/components/common/ActionButton";
 import { HiCalendar } from "react-icons/hi2";
 import { NewTaskModal } from "@/components/tasks/NewTaskModal";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/language-context";
+
 interface DashboardHeaderProps {
   currentUser: any;
   greeting: string;
@@ -16,6 +18,7 @@ export function DashboardHeader({
   onTodayAgendaClick,
 }: DashboardHeaderProps) {
   const [isNewTaskModalOpen, setNewTaskModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div className="dashboard-header">
@@ -28,7 +31,7 @@ export function DashboardHeader({
           <h1 className="dashboard-greeting">
             {greeting}, {currentUser?.firstName || "User"}!
           </h1>
-          <p className="dashboard-date-info">{currentDate} • Ready to tackle your goals?</p>
+          <p className="dashboard-date-info">{currentDate} • {t("dashboard.readyMessage")}</p>
         </div>
       </div>
 
@@ -38,7 +41,7 @@ export function DashboardHeader({
           secondary
           rightIcon={<HiCalendar className="dashboard-icon-sm" />}
         >
-          Today's Agenda
+          {t("dashboard.todaysAgenda")}
         </ActionButton>
 
         {/* New Task Button and Modal */}
@@ -46,7 +49,7 @@ export function DashboardHeader({
           return (
             <>
               <ActionButton showPlusIcon primary onClick={() => setNewTaskModalOpen(true)}>
-                New Task
+                {t("tasks.newTask")}
               </ActionButton>
               <NewTaskModal
                 isOpen={isNewTaskModalOpen}

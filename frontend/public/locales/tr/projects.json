@@ -1,0 +1,23 @@
+{
+  "title": "Projeler",
+  "newProject": "Yeni Proje",
+  "editProject": "Projeyi Düzenle",
+  "deleteProject": "Projeyi Sil",
+  "projectDetails": "Proje Detayları",
+  "projectName": "Proje Adı",
+  "projectDescription": "Proje Açıklaması",
+  "members": "Üyeler",
+  "addMember": "Üye Ekle",
+  "tasks": "Görevler",
+  "settings": "Ayarlar",
+  "overview": "Genel Bakış",
+  "createProject": "Proje oluştur",
+  "startBuilding": "Harika bir şeyler inşa etmeye başlayın",
+  "noProjects": "Henüz proje yok",
+  "getStarted": "İlk projenizi oluşturarak başlayın",
+  "viewAll": "Tümünü gör",
+  "allProjects": "Tüm Projeler",
+  "myProjects": "Projelerim",
+  "calendar": "Takvim",
+  "sprints": "Sprint'ler"
+}

@@ -10,6 +10,7 @@ import {
 import OrganizationSelector from "@/components/header/OrganizationSelector";
 import NotificationDropdown from "@/components/header/NotificationDropdown";
 import InvitationManager from "@/components/header/InvitationManager";
+import LanguageSelector from "@/components/header/LanguageSelector";
 import { ModeToggle } from "@/components/header/ModeToggle";
 import SearchManager from "@/components/header/SearchManager";
 
@@ -71,6 +72,11 @@ export default function HeaderView({
                 {/* Invitation Manager */}
                 <div className="flex items-center justify-center py-2">
                   <InvitationManager userId={currentUser?.id} />
+                </div>
+
+                {/* Language Selector */}
+                <div className="flex items-center justify-center py-2">
+                  <LanguageSelector />
                 </div>
 
                 {/* Mode Toggle */}

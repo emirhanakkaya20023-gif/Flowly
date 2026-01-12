@@ -1,10 +1,10 @@
 {
-  "name": "@taskosaur/backend",
+  "name": "@flowly/backend",
   "version": "0.1.0",
-  "description": "Taskosaur Backend - NestJS API Server",
-  "author": "Taskosaur Team",
+  "description": "Flowly Backend - NestJS API Server",
+  "author": "Emirhan Akkaya",
   "private": true,
-  "license": "SEE LICENSE IN https://github.com/Taskosaur/Taskosaur/blob/main/LICENSE.md",
+  "license": "MIT",
   "scripts": {
     "build": "npm run prisma:generate && nest build",
     "build:dist": "cross-env BUILD_DIST=true npm run build",

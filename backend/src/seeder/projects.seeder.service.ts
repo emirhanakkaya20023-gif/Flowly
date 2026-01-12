@@ -134,7 +134,7 @@ export class ProjectsSeederService {
     if (workspace.slug === 'dev-team') {
       return [
         {
-          name: 'Taskosaur Web Application',
+          name: 'Flowly Web Application',
           description:
             'Main web application built with React, TypeScript, and modern UI components. Includes user management, task tracking, and collaboration features.',
           color: '#3b82f6',

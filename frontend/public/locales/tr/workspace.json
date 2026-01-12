@@ -1,0 +1,16 @@
+{
+  "title": "Çalışma Alanları",
+  "overview": "Genel Bakış",
+  "newWorkspace": "Yeni Çalışma Alanı",
+  "editWorkspace": "Çalışma Alanını Düzenle",
+  "deleteWorkspace": "Çalışma Alanını Sil",
+  "workspaceDetails": "Çalışma Alanı Detayları",
+  "workspaceName": "Çalışma Alanı Adı",
+  "workspaceDescription": "Çalışma Alanı Açıklaması",
+  "members": "Üyeler",
+  "projects": "Projeler",
+  "settings": "Ayarlar",
+  "createWorkspace": "Çalışma alanı oluştur",
+  "startOrganizing": "Projelerinizi organize etmeye başlayın",
+  "viewAll": "Tümünü gör"
+}

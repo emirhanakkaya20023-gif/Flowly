@@ -1,0 +1,35 @@
+{
+  "title": "Görevler",
+  "newTask": "Yeni Görev",
+  "editTask": "Görevi Düzenle",
+  "deleteTask": "Görevi Sil",
+  "taskDetails": "Görev Detayları",
+  "assignTo": "Atanan",
+  "dueDate": "Bitiş Tarihi",
+  "priority": "Öncelik",
+  "status": "Durum",
+  "description": "Açıklama",
+  "attachments": "Ekler",
+  "comments": "Yorumlar",
+  "addComment": "Yorum ekle",
+  "taskName": "Görev Adı",
+  "noTasks": "Henüz görev yok",
+  "createFirstTask": "Başlamak için ilk görevinizi oluşturun",
+  "allTasks": "Tüm Görevler",
+  "myTasks": "Görevlerim",
+  "completedTasks": "Tamamlanan Görevler",
+  "viewAll": "Tümünü gör",
+  "priorities": {
+    "lowest": "En Düşük",
+    "low": "Düşük",
+    "medium": "Orta",
+    "high": "Yüksek",
+    "highest": "En Yüksek"
+  },
+  "statuses": {
+    "todo": "Yapılacak",
+    "inProgress": "Devam Eden",
+    "done": "Tamamlandı",
+    "blocked": "Engellenmiş"
+  }
+}

@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import ResizableSidebar from "./ResizableSidebar";
 import WorkspaceSelector from "./WorkspaceSelector";
 import ProjectSelector from "./ProjectSelector";
+import { useLanguage } from "@/contexts/language-context";
 
 import {
   HiHome,
@@ -80,6 +81,7 @@ export default function Sidebar() {
   const { isAuthenticated } = useAuth();
   const isAuth = isAuthenticated();
   const { getProjectBySlug, currentProject } = useProject();
+  const { t } = useLanguage();
   const [isMounted, setIsMounted] = useState(false);
   const [miniPathName, setMiniPathName] = useState("");
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => {
@@ -132,54 +134,54 @@ export default function Sidebar() {
   const globalNavItems = useMemo(
     () => [
       {
-        name: "Dashboard",
+        name: t("common.navigation.dashboard"),
         href: "/dashboard",
         icon: <HiHome size={16} />,
-        title: "Global Dashboard",
+        title: t("common.navigation.dashboard"),
         disabled: !isAuth,
       },
       {
-        name: "Workspaces",
+        name: t("common.navigation.workspaces") || "Workspaces",
         href: "/workspaces",
         icon: <HiViewGrid size={16} />,
-        title: "All Workspaces",
+        title: t("common.navigation.workspaces") || "All Workspaces",
         disabled: !isAuth,
       },
       {
-        name: "Projects",
+        name: t("common.navigation.projects") || "Projects",
         href: "/projects",
         icon: <HiViewBoards size={16} />,
-        title: "All Projects",
+        title: t("common.navigation.projects") || "All Projects",
         disabled: !isAuth,
       },
       {
-        name: "Tasks",
+        name: t("common.navigation.tasks") || "Tasks",
         href: "/tasks",
         icon: <HiClipboardList size={16} />,
-        title: "All Tasks",
+        title: t("common.navigation.tasks") || "All Tasks",
         disabled: !isAuth,
       },
       {
-        name: "Activities",
+        name: t("common.navigation.activities") || "Activities",
         href: "/activities",
         icon: <HiCalendar size={16} />,
-        title: "All Activities",
+        title: t("common.navigation.activities") || "All Activities",
         disabled: !isAuth,
       },
       // Settings only shown to authenticated users
       ...(isAuth
         ? [
             {
-              name: "Settings",
+              name: t("common.navigation.settings") || "Settings",
               href: "/settings",
               icon: <HiCog size={16} />,
-              title: "All Settings",
+              title: t("common.navigation.settings") || "All Settings",
               disabled: false,
             },
           ]
         : []),
     ],
-    [isAuth]
+    [isAuth, t]
   );
 
   const workspaceNavItems = useMemo(
@@ -187,55 +189,55 @@ export default function Sidebar() {
       currentWorkspaceSlug
         ? [
             {
-              name: "Overview",
+              name: t("workspace.overview") || "Overview",
               href: `/${currentWorkspaceSlug}`,
               icon: <HiViewGrid size={16} />,
-              title: "Workspace Overview",
+              title: t("workspace.overview") || "Workspace Overview",
               disabled: !isAuth,
             },
             {
-              name: "Projects",
+              name: t("common.navigation.projects") || "Projects",
               href: `/${currentWorkspaceSlug}/projects`,
               icon: <HiViewBoards size={16} />,
-              title: "Workspace Projects",
+              title: t("common.navigation.projects") || "Workspace Projects",
               disabled: !isAuth,
             },
             {
-              name: "Members",
+              name: t("workspace.members") || "Members",
               href: `/${currentWorkspaceSlug}/members`,
               icon: <HiUsers size={16} />,
-              title: "Workspace Members",
+              title: t("workspace.members") || "Workspace Members",
               disabled: !isAuth,
             },
             {
-              name: "Activities",
+              name: t("common.navigation.activities") || "Activities",
               href: `/${currentWorkspaceSlug}/activities`,
               icon: <HiCalendar size={16} />,
-              title: "Workspace Activity",
+              title: t("common.navigation.activities") || "Workspace Activity",
               disabled: !isAuth,
             },
             {
-              name: "Tasks",
+              name: t("common.navigation.tasks") || "Tasks",
               href: `/${currentWorkspaceSlug}/tasks`,
               icon: <HiClipboardList size={16} />,
-              title: "Workspace Tasks",
+              title: t("common.navigation.tasks") || "Workspace Tasks",
               disabled: !isAuth,
             },
             // Settings only shown to authenticated users
             ...(isAuth
               ? [
                   {
-                    name: "Settings",
+                    name: t("common.navigation.settings") || "Settings",
                     href: `/${currentWorkspaceSlug}/settings`,
                     icon: <HiCog size={16} />,
-                    title: "Workspace Settings",
+                    title: t("common.navigation.settings") || "Workspace Settings",
                     disabled: false,
                   },
                 ]
               : []),
           ]
         : [],
-    [currentWorkspaceSlug, isAuth]
+    [currentWorkspaceSlug, isAuth, t]
   );
 
   // Default project navigation items for unauthenticated users (all disabled)

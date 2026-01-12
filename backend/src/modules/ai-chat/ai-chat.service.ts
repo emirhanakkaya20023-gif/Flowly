@@ -113,7 +113,7 @@ export class AiChatService {
       })
       .join('\n');
 
-    return `You are Taskosaur AI Assistant. You can ONLY execute predefined commands - NEVER create bash commands or make up new commands.
+    return `You are Flowly AI Assistant. You can ONLY execute predefined commands - NEVER create bash commands or make up new commands.
 
 AVAILABLE COMMANDS:
 ${commandList}
@@ -380,7 +380,7 @@ ${sessionContext?.currentWorkSpaceProjectSlug ? `- Available Projects in Current
         case 'openrouter':
           requestUrl = `${apiUrl}/chat/completions`;
           requestHeaders['HTTP-Referer'] = process.env.APP_URL || 'http://localhost:3000';
-          requestHeaders['X-Title'] = 'Taskosaur AI Assistant';
+          requestHeaders['X-Title'] = 'Flowly AI Assistant';
           requestBody.top_p = 0.9;
           requestBody.frequency_penalty = 0;
           requestBody.presence_penalty = 0;
@@ -988,7 +988,7 @@ ${sessionContext?.currentWorkSpaceProjectSlug ? `- Available Projects in Current
         case 'openrouter':
           requestUrl = `${validatedUrl}/chat/completions`;
           requestHeaders['HTTP-Referer'] = process.env.APP_URL || 'http://localhost:3000';
-          requestHeaders['X-Title'] = 'Taskosaur AI Assistant';
+          requestHeaders['X-Title'] = 'Flowly AI Assistant';
           break;
 
         case 'openai':
