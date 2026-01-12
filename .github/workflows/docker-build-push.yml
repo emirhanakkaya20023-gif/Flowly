@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 env:
-  DOCKER_IMAGE: taskosaur/taskosaur
+  DOCKER_IMAGE: FLOWLY/FLOWLY
   PLATFORMS: linux/amd64,linux/arm64
 
 jobs:

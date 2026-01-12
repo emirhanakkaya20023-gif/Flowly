@@ -15,7 +15,7 @@ interface AutomationLoaderProps {
 
 declare global {
   interface Window {
-    TaskosaurAutomation: any;
+    FLOWLYAutomation: any;
   }
 }
 
@@ -56,7 +56,7 @@ export default function AutomationLoader({
   }, [enabled]);
 
   const isAutomationAvailable =
-    isLoaded && typeof window !== "undefined" && !!(window as any).TaskosaurAutomation;
+    isLoaded && typeof window !== "undefined" && !!(window as any).FLOWLYAutomation;
 
   useEffect(() => {
     if (!isAutomationAvailable) return;
@@ -66,8 +66,8 @@ export default function AutomationLoader({
         // Wait a bit for the script to fully initialize
         await new Promise((resolve) => setTimeout(resolve, 500));
 
-        if (window.TaskosaurAutomation) {
-          const result = await window.TaskosaurAutomation.initialize();
+        if (window.FLOWLYAutomation) {
+          const result = await window.FLOWLYAutomation.initialize();
           setInitResult(result);
         }
       } catch (error) {
@@ -116,10 +116,10 @@ export default function AutomationLoader({
           <div>Context: {initResult.data?.context?.type}</div>
           <div>Source: TypeScript Modules</div>
         </div>
-        <div className="mt-2 text-xs text-blue-300">Console: TaskosaurAutomation</div>
+        <div className="mt-2 text-xs text-blue-300">Console: FLOWLYAutomation</div>
         <button
           onClick={() => {
-            window.TaskosaurAutomation?.demos?.quickDemo?.();
+            window.FLOWLYAutomation?.demos?.quickDemo?.();
           }}
           className="mt-1 text-xs bg-blue-600 hover:bg-blue-700 px-2 py-1 rounded transition-colors"
         >

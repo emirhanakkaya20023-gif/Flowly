@@ -19,7 +19,7 @@ export default function InlineAutomationScript({
     if (!enabled || typeof window === "undefined") return;
 
     // Check if automation is already loaded
-    if ((window as any).TaskosaurAutomation) {
+    if ((window as any).FLOWLYAutomation) {
       return;
     }
 

@@ -50,7 +50,7 @@ export class EmailProcessor {
       const text = this.generateEmailText(template, data);
       if (this.transporter) {
         await this.transporter.sendMail({
-          from: this.configService.get<string>('SMTP_FROM', 'noreply@taskosaur.com'),
+          from: this.configService.get<string>('SMTP_FROM', 'noreply@FLOWLY.com'),
           to,
           subject,
           html,
@@ -111,7 +111,7 @@ export class EmailProcessor {
               </div>
             </div>
             <div class="footer">
-              <p>Taskosaur - Modern Project Management</p>
+              <p>FLOWLY - Modern Project Management</p>
             </div>
           </div>
         `;
@@ -134,7 +134,7 @@ export class EmailProcessor {
               </div>
             </div>
             <div class="footer">
-              <p>Taskosaur - Modern Project Management</p>
+              <p>FLOWLY - Modern Project Management</p>
             </div>
           </div>
         `;
@@ -157,7 +157,7 @@ export class EmailProcessor {
               </div>
             </div>
             <div class="footer">
-              <p>Taskosaur - Modern Project Management</p>
+              <p>FLOWLY - Modern Project Management</p>
             </div>
           </div>
         `;
@@ -200,7 +200,7 @@ export class EmailProcessor {
               }
             </div>
             <div class="footer">
-              <p>Taskosaur - Modern Project Management</p>
+              <p>FLOWLY - Modern Project Management</p>
             </div>
           </div>
         `;
@@ -210,7 +210,7 @@ export class EmailProcessor {
         bodyContent = `
           <div class="container">
             <div class="content">
-              <p>A password reset has been requested for your Taskosaur account.</p>
+              <p>A password reset has been requested for your FLOWLY account.</p>
               
               <div class="task-info">
                 <p>Click the button below to reset your password.</p>
@@ -226,7 +226,7 @@ export class EmailProcessor {
               </div>
             </div>
             <div class="footer">
-              <p>Taskosaur - Modern Project Management</p>
+              <p>FLOWLY - Modern Project Management</p>
             </div>
           </div>
         `;
@@ -236,7 +236,7 @@ export class EmailProcessor {
         bodyContent = `
         <div class="container">
           <div class="content">
-            <p>Your Taskosaur account password has been successfully reset.</p>
+            <p>Your FLOWLY account password has been successfully reset.</p>
             
             <div class="task-info">
               <p><strong>Reset completed:</strong> ${data.resetTime}</p>
@@ -248,11 +248,11 @@ export class EmailProcessor {
             </div>
             
             <div class="info-section">
-              <p>If you didn't authorize this change, contact support immediately at ${data.supportEmail || 'support@taskosaur.com'}</p>
+              <p>If you didn't authorize this change, contact support immediately at ${data.supportEmail || 'support@FLOWLY.com'}</p>
             </div>
           </div>
           <div class="footer">
-            <p>Taskosaur - Modern Project Management</p>
+            <p>FLOWLY - Modern Project Management</p>
           </div>
         </div>
       `;
@@ -262,7 +262,7 @@ export class EmailProcessor {
         bodyContent = `
         <div class="container">
           <div class="content">
-            <p>${data.inviterName} has invited you to join their ${(data.entityType as string).toLowerCase()} on Taskosaur.</p>
+            <p>${data.inviterName} has invited you to join their ${(data.entityType as string).toLowerCase()} on FLOWLY.</p>
             
             <div class="task-info">
               <p><strong>${data.entityType}:</strong> ${data.entityName}</p>
@@ -280,7 +280,7 @@ export class EmailProcessor {
             </div>
           </div>
           <div class="footer">
-            <p>Taskosaur - Modern Project Management</p>
+            <p>FLOWLY - Modern Project Management</p>
           </div>
         </div>
       `;
@@ -290,7 +290,7 @@ export class EmailProcessor {
         bodyContent = `
             <div class="container">
               <div class="content">
-                <p>${data.inviterName} has added you to their ${(data.entityType as string).toLowerCase()} on Taskosaur.</p>
+                <p>${data.inviterName} has added you to their ${(data.entityType as string).toLowerCase()} on FLOWLY.</p>
                 
                 <div class="task-info">
                   <p><strong>${data.entityType}:</strong> ${data.entityName}</p>
@@ -304,7 +304,7 @@ export class EmailProcessor {
                 </div>
               </div>
               <div class="footer">
-                <p>Taskosaur - Modern Project Management</p>
+                <p>FLOWLY - Modern Project Management</p>
               </div>
             </div>
           `;
@@ -329,7 +329,7 @@ export class EmailProcessor {
             </div>
           </div>
           <div class="footer">
-            <p>Taskosaur - Modern Project Management</p>
+            <p>FLOWLY - Modern Project Management</p>
           </div>
         </div>
       `;
@@ -354,7 +354,7 @@ export class EmailProcessor {
             </div>
           </div>
           <div class="footer">
-            <p>Taskosaur - Modern Project Management</p>
+            <p>FLOWLY - Modern Project Management</p>
           </div>
         </div>
       `;
@@ -378,7 +378,7 @@ export class EmailProcessor {
             </div>
           </div>
           <div class="footer">
-            <p>Taskosaur - Modern Project Management</p>
+            <p>FLOWLY - Modern Project Management</p>
           </div>
         </div>
       `;
@@ -388,11 +388,11 @@ export class EmailProcessor {
         bodyContent = `
           <div class="container">
             <div class="content">
-              <p>You have received a new notification from Taskosaur.</p>
+              <p>You have received a new notification from FLOWLY.</p>
               <pre>${JSON.stringify(data, null, 2)}</pre>
             </div>
             <div class="footer">
-              <p>Taskosaur - Modern Project Management</p>
+              <p>FLOWLY - Modern Project Management</p>
             </div>
           </div>
         `;
@@ -403,7 +403,7 @@ export class EmailProcessor {
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Taskosaur - ${template}</title>
+      <title>FLOWLY - ${template}</title>
       ${baseStyles}
     </head>
     <body>
@@ -435,7 +435,7 @@ View task: ${data.taskUrl}
 Happy coding! 🚀
 
 --
-Taskosaur - Modern Project Management
+FLOWLY - Modern Project Management
         `;
 
       case EmailTemplate.DUE_DATE_REMINDER:
@@ -456,16 +456,16 @@ View task: ${data.taskUrl}
 Don't let it slip! ⚡
 
 --
-Taskosaur - Modern Project Management
+FLOWLY - Modern Project Management
         `;
 
       case EmailTemplate.PASSWORD_RESET:
         return `
-Reset Your Taskosaur Password
+Reset Your FLOWLY Password
 
 Hi ${data.userName}!
 
-We received a request to reset your Taskosaur account password.
+We received a request to reset your FLOWLY account password.
 
 PASSWORD RESET REQUEST
 If you requested this password reset, click the link below to set a new password:
@@ -484,12 +484,12 @@ If you have any questions, please contact our support team.
 Stay secure! 🛡️
 
 --
-Taskosaur - Modern Project Management
+FLOWLY - Modern Project Management
 This email was sent because a password reset was requested for your account.
         `;
 
       default:
-        return `Taskosaur Notification\n\n${JSON.stringify(data, null, 2)}`;
+        return `FLOWLY Notification\n\n${JSON.stringify(data, null, 2)}`;
     }
   }
 }

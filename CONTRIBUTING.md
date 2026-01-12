@@ -47,7 +47,7 @@ This project and everyone participating in it is governed by our [Code of Conduc
 - Consider the scope and impact
 
 ### Code Contributions
-- Check existing [issues](https://github.com/Taskosaur/taskosaur/issues) for good first issues
+- Check existing [issues](https://github.com/FLOWLY/FLOWLY/issues) for good first issues
 - Look for issues labeled `good first issue` or `help wanted`
 - Comment on issues you'd like to work on
 - Follow our coding standards and commit guidelines
@@ -230,9 +230,9 @@ Add screenshots here
 
 ## Community
 
-- **Discussions**: [GitHub Discussions](https://github.com/Taskosaur/taskosaur/discussions)
-- **Issues**: [GitHub Issues](https://github.com/Taskosaur/taskosaur/issues)
-- **Email**: support@taskosaur.com
+- **Discussions**: [GitHub Discussions](https://github.com/FLOWLY/FLOWLY/discussions)
+- **Issues**: [GitHub Issues](https://github.com/FLOWLY/FLOWLY/issues)
+- **Email**: support@FLOWLY.com
 
 ## Labels
 
@@ -253,8 +253,8 @@ Check our [Development Roadmap](README.md#development-roadmap) to see what we're
 ## Questions?
 
 If you have questions about contributing, feel free to:
-- Open a [Discussion](https://github.com/Taskosaur/taskosaur/discussions)
+- Open a [Discussion](https://github.com/FLOWLY/FLOWLY/discussions)
 - Create an issue with the `question` label
 - Reach out via email
 
-Thank you for contributing to Taskosaur!
+Thank you for contributing to FLOWLY!

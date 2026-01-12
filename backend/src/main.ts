@@ -88,7 +88,7 @@ async function bootstrap() {
       'JWT-auth',
     )
     .addServer(`http://${host}:${port}`, 'Development server')
-    .addServer('https://api.taskosaur.com', 'Production server')
+    .addServer('https://api.FLOWLY.com', 'Production server')
     .build();
 
   const document = SwaggerModule.createDocument(app, swaggerOptions);

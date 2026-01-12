@@ -35,9 +35,9 @@ export interface AutomationCapabilities {
 
 // Capabilities data (embedded to avoid file loading issues)
 const CAPABILITIES_DATA: AutomationCapabilities = {
-  name: "Taskosaur AI Assistant Capabilities",
+  name: "FLOWLY AI Assistant Capabilities",
   version: "1.0.0",
-  description: "Defines the available automation capabilities for the Taskosaur AI Assistant",
+  description: "Defines the available automation capabilities for the FLOWLY AI Assistant",
 
   capabilities: {
     authentication: {
@@ -46,24 +46,24 @@ const CAPABILITIES_DATA: AutomationCapabilities = {
       actions: [
         {
           name: "login",
-          description: "Log into Taskosaur with email and password",
+          description: "Log into FLOWLY with email and password",
           parameters: [
             { name: "email", type: "string", required: true },
             { name: "password", type: "string", required: true },
           ],
-          example: "I can help you log in to Taskosaur if you provide your credentials.",
+          example: "I can help you log in to FLOWLY if you provide your credentials.",
         },
         {
           name: "logout",
           description: "Log out of the current session",
           parameters: [],
-          example: "I can log you out of your current Taskosaur session.",
+          example: "I can log you out of your current FLOWLY session.",
         },
         {
           name: "checkAuthenticationStatus",
           description: "Check if user is currently authenticated",
           parameters: [],
-          example: "I can check if you're currently logged in to Taskosaur.",
+          example: "I can check if you're currently logged in to FLOWLY.",
         },
       ],
     },
@@ -308,9 +308,9 @@ const CAPABILITIES_DATA: AutomationCapabilities = {
       actions: [
         {
           name: "navigateTo",
-          description: "Navigate to any URL within Taskosaur",
+          description: "Navigate to any URL within FLOWLY",
           parameters: [{ name: "url", type: "string", required: true }],
-          example: "I can navigate you to any page within Taskosaur.",
+          example: "I can navigate you to any page within FLOWLY.",
         },
         {
           name: "getCurrentContext",
@@ -328,7 +328,7 @@ const CAPABILITIES_DATA: AutomationCapabilities = {
           name: "navigateToDashboard",
           description: "Navigate to the home page or dashboard page",
           parameters: [],
-          example: "I can navigate you to Taskosaur dashboard.",
+          example: "I can navigate you to FLOWLY dashboard.",
         },
       ],
     },
@@ -406,7 +406,7 @@ const CAPABILITIES_DATA: AutomationCapabilities = {
 
   limitations: {
     general: [
-      "I cannot access external systems or APIs outside of Taskosaur",
+      "I cannot access external systems or APIs outside of FLOWLY",
       "I cannot modify system settings or user permissions",
       "I cannot access sensitive data like passwords or private information",
       "I cannot perform actions that require admin privileges",
@@ -432,11 +432,11 @@ const CAPABILITIES_DATA: AutomationCapabilities = {
   },
 
   error_messages: {
-    unsupported_action: `I'm sorry, but I cannot perform that action. I'm specifically designed to help with Taskosaur project management tasks.
+    unsupported_action: `I'm sorry, but I cannot perform that action. I'm specifically designed to help with FLOWLY project management tasks.
 
 Here's what I CAN help you with:
 • Create and manage workspaces, projects, and tasks
-• Navigate through the Taskosaur interface
+• Navigate through the FLOWLY interface
 • Filter and search your content
 • Update task statuses and details
 • Set up project workflows
@@ -448,13 +448,13 @@ Is there a project management task I can help you with instead?`,
 • Which project (if applicable)
 • What specific action you'd like me to perform`,
 
-    authentication_required: `I need you to be logged in to Taskosaur to perform that action. Would you like me to help you log in first?`,
+    authentication_required: `I need you to be logged in to FLOWLY to perform that action. Would you like me to help you log in first?`,
 
     permission_denied: `I don't have permission to perform that action. This might require admin privileges or special access that I don't have.`,
   },
 
   response_templates: {
-    capability_list: `Here are the main things I can help you with in Taskosaur:
+    capability_list: `Here are the main things I can help you with in FLOWLY:
 
 📁 **Workspace Management**
 • Create, edit, delete workspaces
@@ -478,7 +478,7 @@ Is there a project management task I can help you with instead?`,
 
 What would you like me to help you with?`,
 
-    getting_started: `Great! I'm here to help you manage your projects in Taskosaur. To get started, I can:
+    getting_started: `Great! I'm here to help you manage your projects in FLOWLY. To get started, I can:
 
 1. **Set up a new project** - I'll create the workspace, project, and initial tasks
 2. **Navigate to existing content** - Help you find and open your workspaces/projects

@@ -1,12 +1,12 @@
-# Taskosaur - Open Source Project Management with Conversational AI Task Execution
+# FLOWLY - Open Source Project Management with Conversational AI Task Execution
 
-![Logo](https://raw.githubusercontent.com/Taskosaur/Taskosaur/main/frontend/public/taskosaur-logo.png)
+![Logo](https://raw.githubusercontent.com/FLOWLY/FLOWLY/main/frontend/public/FLOWLY-logo.png)
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/taskosaur/taskosaur)](https://hub.docker.com/r/taskosaur/taskosaur)
-[![Docker Image Size](https://img.shields.io/docker/image-size/taskosaur/taskosaur/latest)](https://hub.docker.com/r/taskosaur/taskosaur)
-[![License](https://img.shields.io/badge/license-BSL-blue.svg)](https://github.com/Taskosaur/Taskosaur/blob/main/LICENSE.md)
+[![Docker Pulls](https://img.shields.io/docker/pulls/FLOWLY/FLOWLY)](https://hub.docker.com/r/FLOWLY/FLOWLY)
+[![Docker Image Size](https://img.shields.io/docker/image-size/FLOWLY/FLOWLY/latest)](https://hub.docker.com/r/FLOWLY/FLOWLY)
+[![License](https://img.shields.io/badge/license-BSL-blue.svg)](https://github.com/FLOWLY/FLOWLY/blob/main/LICENSE.md)
 
-**Official Docker image for Taskosaur** - An open source project management platform with conversational AI for task execution in-app that lets you manage projects through natural conversation directly within the application.
+**Official Docker image for FLOWLY** - An open source project management platform with conversational AI for task execution in-app that lets you manage projects through natural conversation directly within the application.
 
 ## Quick Start
 
@@ -17,9 +17,9 @@ docker compose up -d
 # Access at http://localhost:3000
 ```
 
-## What is Taskosaur?
+## What is FLOWLY?
 
-Taskosaur is a self-hosted project management platform that combines traditional PM features with conversational AI for task execution in-app. The AI assistant performs actions directly in your browser through natural conversation. Instead of clicking through forms and menus, simply describe what you need in natural language.
+FLOWLY is a self-hosted project management platform that combines traditional PM features with conversational AI for task execution in-app. The AI assistant performs actions directly in your browser through natural conversation. Instead of clicking through forms and menus, simply describe what you need in natural language.
 
 **Key Features:**
 - 🤖 Conversational AI for task execution in-app
@@ -47,18 +47,18 @@ services:
   postgres:
     image: postgres:16
     environment:
-      POSTGRES_USER: taskosaur
-      POSTGRES_PASSWORD: taskosaur_password_change_this
-      POSTGRES_DB: taskosaur
+      POSTGRES_USER: FLOWLY
+      POSTGRES_PASSWORD: FLOWLY_password_change_this
+      POSTGRES_DB: FLOWLY
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U taskosaur"]
+      test: ["CMD-SHELL", "pg_isready -U FLOWLY"]
       interval: 10s
       timeout: 5s
       retries: 5
     networks:
-      - taskosaur-network
+      - FLOWLY-network
     restart: unless-stopped
 
   # Redis for Bull Queue
@@ -73,18 +73,18 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - taskosaur-network
+      - FLOWLY-network
     restart: unless-stopped
 
-  # Taskosaur Application
+  # FLOWLY Application
   app:
-    image: taskosaur/taskosaur:latest
+    image: FLOWLY/FLOWLY:latest
     environment:
       # Node Environment
       NODE_ENV: production
 
       # Database Configuration
-      DATABASE_URL: postgresql://taskosaur:taskosaur_password_change_this@postgres:5432/taskosaur
+      DATABASE_URL: postgresql://FLOWLY:FLOWLY_password_change_this@postgres:5432/FLOWLY
 
       # Redis Configuration
       REDIS_HOST: redis
@@ -108,7 +108,7 @@ services:
       SMTP_PORT: ${SMTP_PORT:-587}
       SMTP_USER: ${SMTP_USER:-}
       SMTP_PASS: ${SMTP_PASS:-}
-      SMTP_FROM: ${SMTP_FROM:-noreply@taskosaur.com}
+      SMTP_FROM: ${SMTP_FROM:-noreply@FLOWLY.com}
 
       # File Upload
       UPLOAD_DEST: ./uploads
@@ -120,15 +120,15 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - app_uploads:/app/taskosaur/uploads
-      - app_logs:/app/taskosaur/logs
+      - app_uploads:/app/FLOWLY/uploads
+      - app_logs:/app/FLOWLY/logs
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
     networks:
-      - taskosaur-network
+      - FLOWLY-network
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "node -e \"require('http').get('http://localhost:3000/api/health', (r) => process.exit(r.statusCode === 200 ? 0 : 1))\""]
@@ -144,7 +144,7 @@ volumes:
   app_logs:
 
 networks:
-  taskosaur-network:
+  FLOWLY-network:
     driver: bridge
 ```
 
@@ -170,7 +170,7 @@ docker compose down -v
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `DATABASE_URL` | PostgreSQL connection string | `postgresql://user:pass@postgres:5432/taskosaur` |
+| `DATABASE_URL` | PostgreSQL connection string | `postgresql://user:pass@postgres:5432/FLOWLY` |
 | `REDIS_HOST` | Redis hostname | `redis` |
 | `REDIS_PORT` | Redis port | `6379` |
 | `JWT_SECRET` | JWT signing secret (min 32 chars) | Your secure random string |
@@ -190,7 +190,7 @@ docker compose down -v
 | `SMTP_PORT` | `587` | SMTP port |
 | `SMTP_USER` | _(empty)_ | SMTP username |
 | `SMTP_PASS` | _(empty)_ | SMTP password |
-| `SMTP_FROM` | `noreply@taskosaur.com` | Email sender address |
+| `SMTP_FROM` | `noreply@FLOWLY.com` | Email sender address |
 | `UPLOAD_DEST` | `./uploads` | File upload directory |
 | `MAX_FILE_SIZE` | `10485760` | Max upload size (bytes) |
 | `MAX_CONCURRENT_JOBS` | `5` | Max concurrent background jobs |
@@ -212,8 +212,8 @@ openssl rand -hex 32
 
 The image uses the following volumes:
 
-- `/app/taskosaur/uploads` - User uploaded files
-- `/app/taskosaur/logs` - Application logs
+- `/app/FLOWLY/uploads` - User uploaded files
+- `/app/FLOWLY/logs` - Application logs
 
 ## Ports
 
@@ -229,7 +229,7 @@ curl http://localhost:3000/api/health
 
 ## Conversational AI Task Execution Setup
 
-After starting Taskosaur, enable conversational AI for in-app task execution:
+After starting FLOWLY, enable conversational AI for in-app task execution:
 
 1. **Navigate to Settings** → Organization Settings → AI Assistant Settings
 2. **Add your LLM API key** from any provider:
@@ -267,7 +267,7 @@ After starting Taskosaur, enable conversational AI for in-app task execution:
 ```nginx
 server {
     listen 80;
-    server_name taskosaur.example.com;
+    server_name FLOWLY.example.com;
 
     client_max_body_size 10M;
 
@@ -291,20 +291,20 @@ server {
 
 ```bash
 # Backup PostgreSQL
-docker compose exec postgres pg_dump -U taskosaur taskosaur > backup.sql
+docker compose exec postgres pg_dump -U FLOWLY FLOWLY > backup.sql
 
 # Backup uploads
-docker compose cp app:/app/taskosaur/uploads ./uploads_backup
+docker compose cp app:/app/FLOWLY/uploads ./uploads_backup
 ```
 
 ### Restore
 
 ```bash
 # Restore PostgreSQL
-docker compose exec -T postgres psql -U taskosaur taskosaur < backup.sql
+docker compose exec -T postgres psql -U FLOWLY FLOWLY < backup.sql
 
 # Restore uploads
-docker compose cp ./uploads_backup app:/app/taskosaur/uploads
+docker compose cp ./uploads_backup app:/app/FLOWLY/uploads
 ```
 
 ## Troubleshooting
@@ -326,7 +326,7 @@ docker compose ps
 docker compose ps postgres
 
 # Test connection
-docker compose exec postgres psql -U taskosaur -d taskosaur -c "SELECT 1;"
+docker compose exec postgres psql -U FLOWLY -d FLOWLY -c "SELECT 1;"
 ```
 
 ### Reset database
@@ -350,18 +350,18 @@ ports:
 
 ## Links
 
-- **GitHub**: https://github.com/Taskosaur/Taskosaur
-- **Documentation**: https://github.com/Taskosaur/Taskosaur#readme
-- **Issues**: https://github.com/Taskosaur/Taskosaur/issues
+- **GitHub**: https://github.com/FLOWLY/FLOWLY
+- **Documentation**: https://github.com/FLOWLY/FLOWLY#readme
+- **Issues**: https://github.com/FLOWLY/FLOWLY/issues
 - **Discord**: https://discord.gg/5cpHUSxePp
 - **License**: Business Source License (BSL)
 
 ## Support
 
-- Email: support@taskosaur.com
+- Email: support@FLOWLY.com
 - Discord: [Join our community](https://discord.gg/5cpHUSxePp)
-- GitHub Issues: [Report bugs](https://github.com/Taskosaur/Taskosaur/issues)
+- GitHub Issues: [Report bugs](https://github.com/FLOWLY/FLOWLY/issues)
 
 ---
 
-**Built by the Taskosaur team** | Licensed under Business Source License
+**Built by the FLOWLY team** | Licensed under Business Source License

@@ -31,7 +31,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
-          POSTGRES_DB: taskosaur_test
+          POSTGRES_DB: FLOWLY_test
         ports:
           - 5432:5432
         options: >-
@@ -65,7 +65,7 @@ jobs:
           cp .env.example .env
           cp .env.example .env.test
           # Override DATABASE_URL for tests to point to the service container
-          echo "DATABASE_URL=\"postgresql://postgres:password@localhost:5432/taskosaur_test?schema=public\"" >> .env.test
+          echo "DATABASE_URL=\"postgresql://postgres:password@localhost:5432/FLOWLY_test?schema=public\"" >> .env.test
 
       - name: Install dependencies
         run: npm ci

@@ -41,7 +41,7 @@ export class QueueConfigService {
           db: redisDb,
           maxRetriesPerRequest: 3,
         },
-        prefix: this.configService.get<string>('QUEUE_PREFIX', 'taskosaur'),
+        prefix: this.configService.get<string>('QUEUE_PREFIX', 'FLOWLY'),
       },
       betterQueue: {
         store: this.configService.get<string>('BETTER_QUEUE_STORE', 'memory') as 'memory',

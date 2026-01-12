@@ -74,7 +74,7 @@ export default function PublicTaskView({ task, token }: PublicTaskViewProps) {
         <div className="flex justify-center mb-8">
           <div className="flex items-center gap-2 text-primary font-bold text-xl">
             <span className="bg-primary text-primary-foreground p-1 rounded-md text-sm">TS</span>
-            <span>Taskosaur</span>
+            <span>FLOWLY</span>
             <Badge variant="outline" className="ml-2 font-normal text-xs">Shared View</Badge>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function PublicTaskView({ task, token }: PublicTaskViewProps) {
 
         {/* Footer */}
         <div className="text-center text-sm text-gray-400 py-4">
-          <p>Shared securely via Taskosaur</p>
+          <p>Shared securely via FLOWLY</p>
         </div>
       </div>
     </div>

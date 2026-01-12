@@ -86,7 +86,7 @@ Add any other context, links, or screenshots about the feature request here.
 ## Roadmap Alignment
 
 **Does this align with the current roadmap?**
-Check the [Development Roadmap](https://github.com/your-username/taskosaur#development-roadmap) and mention which phase this might fit into.
+Check the [Development Roadmap](https://github.com/your-username/FLOWLY#development-roadmap) and mention which phase this might fit into.
 
 ## Contribution
 

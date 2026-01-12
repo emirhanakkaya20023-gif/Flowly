@@ -467,13 +467,13 @@ export class EmailService {
     try {
       const emailData = {
         ...data,
-        supportEmail: this.configService.get('SUPPORT_EMAIL', 'support@taskosaur.com'),
-        companyName: 'Taskosaur',
+        supportEmail: this.configService.get('SUPPORT_EMAIL', 'support@FLOWLY.com'),
+        companyName: 'FLOWLY',
       };
 
       await this.sendEmail({
         to: email,
-        subject: 'Password Successfully Reset - Taskosaur',
+        subject: 'Password Successfully Reset - FLOWLY',
         template: EmailTemplate.PASSWORD_RESET_CONFIRMATION,
         data: emailData,
         priority: EmailPriority.HIGH,
@@ -497,13 +497,13 @@ export class EmailService {
     try {
       const emailData = {
         ...data,
-        supportEmail: this.configService.get('SUPPORT_EMAIL', 'support@taskosaur.com'),
-        companyName: 'Taskosaur',
+        supportEmail: this.configService.get('SUPPORT_EMAIL', 'support@FLOWLY.com'),
+        companyName: 'FLOWLY',
       };
 
       await this.sendEmail({
         to: email,
-        subject: `You're invited to join ${data.entityName} - Taskosaur`,
+        subject: `You're invited to join ${data.entityName} - FLOWLY`,
         template: EmailTemplate.SEND_INVITATION,
         data: emailData,
         priority: EmailPriority.NORMAL,
@@ -530,15 +530,15 @@ export class EmailService {
     try {
       const emailData = {
         ...data,
-        supportEmail: this.configService.get('SUPPORT_EMAIL', 'support@taskosaur.com'),
-        companyName: 'Taskosaur',
+        supportEmail: this.configService.get('SUPPORT_EMAIL', 'support@FLOWLY.com'),
+        companyName: 'FLOWLY',
       };
 
       // const _entityTypeLabel = data.entityType === 'workspace' ? 'workspace' : 'project';
 
       await this.sendEmail({
         to: email,
-        subject: `You've been added to ${data.entityName} - Taskosaur`,
+        subject: `You've been added to ${data.entityName} - FLOWLY`,
         template: EmailTemplate.DIRECT_ADD_NOTIFICATION,
         data: emailData,
         priority: EmailPriority.NORMAL,

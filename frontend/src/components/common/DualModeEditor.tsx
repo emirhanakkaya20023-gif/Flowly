@@ -19,7 +19,7 @@ const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
 export type EditorMode = "markdown" | "richtext";
 
-const EDITOR_MODE_STORAGE_KEY = "taskosaur_comment_editor_mode";
+const EDITOR_MODE_STORAGE_KEY = "FLOWLY_comment_editor_mode";
 
 // Inline styles configuration
 const INLINE_STYLES = [

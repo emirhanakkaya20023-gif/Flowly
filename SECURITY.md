@@ -33,7 +33,7 @@ Include the following information:
 
 #### 2. GitHub Security Advisories
 You can also report vulnerabilities through GitHub's private vulnerability reporting:
-1. Go to the [Security tab](https://github.com/Taskosaur/taskosaur/security) of this repository
+1. Go to the [Security tab](https://github.com/FLOWLY/FLOWLY/security) of this repository
 2. Click "Report a vulnerability"
 3. Fill out the security advisory form
 
@@ -98,7 +98,7 @@ After you submit a vulnerability report, here's what happens:
 - Implement rate limiting on API endpoints
 - Validate file uploads and restrict file types
 
-## Security Measures in Taskosaur
+## Security Measures in FLOWLY
 
 ### Authentication & Authorization
 - JWT-based authentication with refresh tokens
@@ -122,7 +122,7 @@ After you submit a vulnerability report, here's what happens:
 
 ### Subscribing to Security Updates
 - Watch this repository for security advisories
-- Subscribe to our security mailing list: security-updates@taskosaur.com
+- Subscribe to our security mailing list: security-updates@FLOWLY.com
 - Follow our GitHub releases for security patches
 
 ### Applying Security Updates
@@ -159,8 +159,8 @@ After you submit a vulnerability report, here's what happens:
 ## Security Questions
 
 If you have questions about security but don't want to report a vulnerability:
-- Email: security-questions@taskosaur.com
-- Create a discussion in the [Security category](https://github.com/Taskosaur/taskosaur/discussions/categories/security)
+- Email: security-questions@FLOWLY.com
+- Create a discussion in the [Security category](https://github.com/FLOWLY/FLOWLY/discussions/categories/security)
 
 ## Hall of Fame
 
@@ -178,4 +178,4 @@ We maintain a list of security researchers who have responsibly disclosed vulner
 
 ---
 
-Thank you for helping keep Taskosaur and our users safe!
+Thank you for helping keep FLOWLY and our users safe!

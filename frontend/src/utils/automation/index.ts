@@ -1,7 +1,7 @@
 /**
- * Taskosaur Browser Automation System
+ * FLOWLY Browser Automation System
  *
- * This module provides comprehensive browser-based automation for the Taskosaur application.
+ * This module provides comprehensive browser-based automation for the FLOWLY application.
  * It can be used for testing, browser console manipulation, and MCP system integration.
  */
 
@@ -18,9 +18,9 @@ import * as SprintAutomation from "./sprints";
 export type { AutomationResult } from "./helpers";
 
 /**
- * Main Taskosaur Automation class
+ * Main FLOWLY Automation class
  */
-export class TaskosaurAutomation {
+export class FLOWLYAutomation {
   // Helper functions
   public helpers = Helpers;
 
@@ -289,7 +289,7 @@ export class TaskosaurAutomation {
         throw new Error("Automation system requires browser environment");
       }
 
-      // Check if we're on a Taskosaur domain
+      // Check if we're on a FLOWLY domain
       const hostname = window.location.hostname;
 
       // Perform initial checks
@@ -318,7 +318,7 @@ export class TaskosaurAutomation {
 }
 
 // Create and export the main automation instance
-export const automation = new TaskosaurAutomation();
+export const automation = new FLOWLYAutomation();
 
 // Export individual modules for direct import
 export {
@@ -385,17 +385,17 @@ export const {
 export function enableBrowserConsoleAccess(): void {
   if (typeof window !== "undefined") {
     // Make main automation instance available globally
-    (window as any).TaskosaurAutomation = automation;
+    (window as any).FLOWLYAutomation = automation;
 
     // Make individual modules available
-    (window as any).taskosaurAuth = AuthAutomation;
-    (window as any).taskosaurWorkspace = WorkspaceAutomation;
-    (window as any).taskosaurProject = ProjectAutomation;
-    (window as any).taskosaurTask = TaskAutomation;
-    (window as any).taskosaurHelpers = Helpers;
+    (window as any).FLOWLYAuth = AuthAutomation;
+    (window as any).FLOWLYWorkspace = WorkspaceAutomation;
+    (window as any).FLOWLYProject = ProjectAutomation;
+    (window as any).FLOWLYTask = TaskAutomation;
+    (window as any).FLOWLYHelpers = Helpers;
 
     // Make workflows available
-    (window as any).taskosaurWorkflows = automation.workflows;
+    (window as any).FLOWLYWorkflows = automation.workflows;
   }
 }
 
@@ -451,7 +451,7 @@ export const MCPIntegration = {
       functions: [
         {
           name: "login",
-          description: "Log into Taskosaur application",
+          description: "Log into FLOWLY application",
           parameters: ["email", "password"],
           returns: "AutomationResult",
         },

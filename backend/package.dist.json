@@ -1,10 +1,10 @@
 {
-  "name": "@taskosaur/dist",
+  "name": "@FLOWLY/dist",
   "version": "0.1.0",
-  "description": "Taskosaur Backend - NestJS API Server",
-  "author": "Taskosaur Team",
+  "description": "FLOWLY Backend - NestJS API Server",
+  "author": "FLOWLY Team",
   "private": true,
-  "license": "SEE LICENSE IN https://github.com/Taskosaur/Taskosaur/blob/main/LICENSE.md",
+  "license": "SEE LICENSE IN https://github.com/FLOWLY/FLOWLY/blob/main/LICENSE.md",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",

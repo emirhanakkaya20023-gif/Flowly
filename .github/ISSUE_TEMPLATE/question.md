@@ -1,6 +1,6 @@
 ---
 name: Question
-about: Ask a question about Taskosaur
+about: Ask a question about FLOWLY
 title: '[QUESTION] '
 labels: ['question']
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 
 ## Question
 
-A clear and concise question about Taskosaur.
+A clear and concise question about FLOWLY.
 
 ## Context
 
@@ -21,11 +21,11 @@ List any approaches you've already attempted.
 ## Research Done
 
 **Have you checked the following resources?**
-- [ ] [README.md](https://github.com/your-username/taskosaur/blob/main/README.md)
-- [ ] [FAQ Section](https://github.com/your-username/taskosaur/blob/main/README.md#faq)
+- [ ] [README.md](https://github.com/your-username/FLOWLY/blob/main/README.md)
+- [ ] [FAQ Section](https://github.com/your-username/FLOWLY/blob/main/README.md#faq)
 - [ ] [API Documentation](http://localhost:3000/api/docs)
-- [ ] [Existing Issues](https://github.com/your-username/taskosaur/issues)
-- [ ] [Discussions](https://github.com/your-username/taskosaur/discussions)
+- [ ] [Existing Issues](https://github.com/your-username/FLOWLY/issues)
+- [ ] [Discussions](https://github.com/your-username/FLOWLY/discussions)
 
 ## Environment (if relevant)
 
@@ -33,7 +33,7 @@ List any approaches you've already attempted.
 - OS: [e.g. macOS, Windows, Linux]
 - Node.js Version: [e.g. 22.0.0]
 - Browser: [e.g. Chrome, Firefox, Safari]
-- Taskosaur Version: [e.g. 1.0.0]
+- FLOWLY Version: [e.g. 1.0.0]
 
 ## Category
 

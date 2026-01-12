@@ -45,6 +45,6 @@ export function useAutomationScript(options: UseAutomationScriptOptions = {}) {
     isLoaded,
     error,
     isAutomationAvailable:
-      isLoaded && typeof window !== "undefined" && !!(window as any).TaskosaurAutomation,
+      isLoaded && typeof window !== "undefined" && !!(window as any).FLOWLYAutomation,
   };
 }

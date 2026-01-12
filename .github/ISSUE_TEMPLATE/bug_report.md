@@ -45,7 +45,7 @@ If applicable, add screenshots to help explain your problem.
 - Browser [e.g. stock browser, safari]
 - Version [e.g. 22]
 
-## Taskosaur Configuration
+## FLOWLY Configuration
 
 **Frontend:**
 - Next.js Version: [e.g. 15.2.2]

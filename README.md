@@ -4,11 +4,11 @@
 
 ### Open Source Project Management with Conversational AI Task Execution
 
-### 📹 Watch Taskosaur in Action
+### 📹 Watch FLOWLY in Action
 
-[![Taskosaur Demo - AI Turns Simple Requests Into Complete Projects](https://img.youtube.com/vi/sv2lsteRKac/maxresdefault.jpg)](https://youtu.be/sv2lsteRKac)
+[![FLOWLY Demo - AI Turns Simple Requests Into Complete Projects](https://img.youtube.com/vi/sv2lsteRKac/maxresdefault.jpg)](https://youtu.be/sv2lsteRKac)
 
-*Click to watch: See how Conversational AI Task Execution works in Taskosaur*
+*Click to watch: See how Conversational AI Task Execution works in FLOWLY*
 
 Flowly is an open source project management platform with conversational AI for task execution in-app. The AI assistant handles project management tasks through natural conversation, from creating tasks to managing workflows directly within the application.
 
@@ -118,7 +118,7 @@ If you prefer to run services locally:
 
    ```env
    # Database Configuration
-   DATABASE_URL="postgresql://taskosaur:taskosaur@localhost:5432/taskosaur"
+   DATABASE_URL="postgresql://FLOWLY:FLOWLY@localhost:5432/FLOWLY"
 
    # Application
    NODE_ENV=development
@@ -140,10 +140,10 @@ If you prefer to run services locally:
    # Email Configuration (optional, for notifications)
    SMTP_HOST=smtp.example.com
    SMTP_PORT=587
-   SMTP_USER=your-email@taskosaur.com
+   SMTP_USER=your-email@FLOWLY.com
    SMTP_PASS=your-app-password
-   SMTP_FROM=noreply@taskosaur.com
-   EMAIL_DOMAIN="taskosaur.com"
+   SMTP_FROM=noreply@FLOWLY.com
+   EMAIL_DOMAIN="FLOWLY.com"
 
    # Frontend URL (for email links and CORS)
    FRONTEND_URL=http://localhost:3001
@@ -271,7 +271,7 @@ git commit -m "feat: add feature"  # Runs checks automatically
 ## Project Structure
 
 ```
-taskosaur/
+FLOWLY/
 ├── backend/                # NestJS Backend (Port 3000)
 │   ├── src/
 │   │   ├── modules/       # Feature modules
@@ -324,7 +324,7 @@ taskosaur/
 
 ### How Conversational AI Task Execution Works
 
-Taskosaur's Conversational AI Task Execution features conversational AI for task execution in-app, performing actions directly instead of just providing suggestions:
+FLOWLY's Conversational AI Task Execution features conversational AI for task execution in-app, performing actions directly instead of just providing suggestions:
 
 - **In-App Conversational Execution** - Chat naturally with AI to execute tasks directly within the application
 - **Direct Browser Automation** - AI navigates your interface and clicks buttons in real-time
@@ -344,13 +344,13 @@ Taskosaur's Conversational AI Task Execution features conversational AI for task
 
 ## Features
 
-_Taskosaur is actively under development. The following features represent our planned capabilities, with many already implemented and others in progress._
+_FLOWLY is actively under development. The following features represent our planned capabilities, with many already implemented and others in progress._
 
 ### 🤖 Conversational AI Task Execution Capabilities
 
 🎯 **Conversational Task Execution In-App**
 
-- **In-App Chat Interface**: Converse with AI directly within Taskosaur to execute tasks
+- **In-App Chat Interface**: Converse with AI directly within FLOWLY to execute tasks
 - **Browser-Based Task Execution**: AI navigates the interface, fills forms, and completes tasks in real-time
 - **Multi-Step Workflow Processing**: Execute complex workflows with a single conversational command
 - **Context Understanding**: AI recognizes your current workspace, project, and team context
@@ -463,7 +463,7 @@ _Taskosaur is actively under development. The following features represent our p
 
    ```env
    # Database Configuration
-   DATABASE_URL="postgresql://your-db-username:your-db-password@localhost:5432/taskosaur"
+   DATABASE_URL="postgresql://your-db-username:your-db-password@localhost:5432/FLOWLY"
 
    # Authentication
    JWT_SECRET="your-jwt-secret-key-change-this"
@@ -481,7 +481,7 @@ _Taskosaur is actively under development. The following features represent our p
    SMTP_PORT=587
    SMTP_USER=your-email@gmail.com
    SMTP_PASS=your-app-password
-   SMTP_FROM=noreply@taskosaur.com
+   SMTP_FROM=noreply@FLOWLY.com
 
    # Frontend URL (for email links)
    FRONTEND_URL=http://localhost:3000
@@ -623,7 +623,7 @@ git commit -m "fix: urgent hotfix" --no-verify
 ## Project Structure
 
 ```
-taskosaur/
+FLOWLY/
 ├── backend/                 # NestJS Backend
 │   ├── src/
 │   │   ├── modules/        # Feature modules
@@ -653,8 +653,8 @@ taskosaur/
 
 ```bash
 # Clone the repository
-git clone https://github.com/Taskosaur/Taskosaur.git taskosaur
-cd taskosaur
+git clone https://github.com/FLOWLY/FLOWLY.git FLOWLY
+cd FLOWLY
 
 # Setup environment variables
 cp .env.example .env
@@ -710,7 +710,7 @@ Update your `.env` file for production:
 NODE_ENV=production
 
 # Database Configuration
-DATABASE_URL="postgresql://username:password@your-db-host:5432/taskosaur"
+DATABASE_URL="postgresql://username:password@your-db-host:5432/FLOWLY"
 
 # Authentication
 JWT_SECRET="your-secure-production-jwt-secret"

@@ -58,10 +58,10 @@ This Code of Conduct applies to all Flowly project spaces, including:
 
 ### Reporting
 Report violations by:
-- Emailing: conduct@taskosaur.com
+- Emailing: conduct@FLOWLY.com
 - Direct message to project maintainers
 - Using GitHub's reporting features
-- For security-related concerns: security@taskosaur.com
+- For security-related concerns: security@FLOWLY.com
 
 All reports will be handled confidentially and reviewed promptly.
 
@@ -78,7 +78,7 @@ All enforcement decisions will be fair, proportional, and allow for appeals.
 ### Appeals Process
 
 If you believe you have been unfairly treated:
-1. Email conduct@taskosaur.com within 14 days of the action
+1. Email conduct@FLOWLY.com within 14 days of the action
 2. Provide a clear description of the situation and your concerns
 3. Appeals will be reviewed by different maintainers than those involved in the original decision
 4. You will receive a response within 7 business days
@@ -99,7 +99,7 @@ If you believe you have been unfairly treated:
 
 ## Contributor Recognition
 
-We value all contributions to Taskosaur, including:
+We value all contributions to FLOWLY, including:
 - Code contributions and bug fixes
 - Documentation improvements
 - Issue reporting and testing
