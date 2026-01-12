@@ -4,6 +4,10 @@
 
 ### Open Source Project Management with Conversational AI Task Execution
 
+![Flowly Dashboard with AI Assistant](./assets/screenshots/flowly-dashboard.png)
+
+*Flowly Dashboard featuring AI Assistant, project analytics, and task management*
+
 Flowly is an open source project management platform with conversational AI for task execution in-app. The AI assistant handles project management tasks through natural conversation, from creating tasks to managing workflows directly within the application.
 
 <!-- Badges -->
