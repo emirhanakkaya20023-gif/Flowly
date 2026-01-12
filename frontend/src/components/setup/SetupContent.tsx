@@ -20,7 +20,7 @@ export function SetupContent() {
           <div className="">
             <div className="flex items-center">
               <Image
-                src="/flowly-logo.svg"
+                src="/flowly-logo-modern.svg"
                 alt="Flowly Logo"
                 width={50}
                 height={50}

@@ -149,7 +149,7 @@ export function SetupForm() {
         <div className="setup-mobile-logo">
           <div className="setup-mobile-logo-icon">
             <Image
-              src="/flowly-logo.svg"
+              src="/flowly-logo-modern.svg"
               alt="Flowly Logo"
               width={50}
               height={50}

@@ -75,13 +75,11 @@ export function LoginForm() {
         <div className="signup-mobile-logo">
           <div className="signup-mobile-logo-icon">
             <Image
-              src="/flowly-logo.svg"
+              src="/flowly-logo-modern.svg"
               alt="Flowly Logo"
-              width={50}
-              height={50}
-              className={`size-10 ${
-                resolvedTheme === "light" ? " filter invert brightness-200" : ""
-              }`}
+              width={120}
+              height={40}
+              className="w-auto h-12"
             />
           </div>
         </div>
