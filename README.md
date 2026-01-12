@@ -1,6 +1,6 @@
 # Flowly
 
-<img src="./frontend/public/flowly-logo.svg" alt="Flowly Logo" width="128">
+<img src="./assets/flowly-logo-modern.svg" alt="Flowly Logo">
 
 ### Open Source Project Management with Conversational AI Task Execution
 
