@@ -3,6 +3,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/auth-context";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -36,6 +37,7 @@ interface FormData {
 export function RegisterForm() {
   const router = useRouter();
   const { resolvedTheme } = useTheme();
+  const { t } = useTranslation('auth');
 
   const searchParams = useSearchParams();
   const { register } = useAuth();
@@ -157,8 +159,8 @@ export function RegisterForm() {
           </div>
         </div>
 
-        <h1 className="signup-form-title">Create Account</h1>
-        <p className="signup-form-subtitle">Join thousands of teams using Flowly</p>
+        <h1 className="signup-form-title">{t('register.title')}</h1>
+        <p className="signup-form-subtitle">{t('register.subtitle')}</p>
       </div>
 
       {/* Error Alert */}
@@ -190,7 +192,7 @@ export function RegisterForm() {
           <div className="signup-field-container">
             <Label htmlFor="firstName" className="signup-field-label">
               <User className="signup-field-icon" />
-              <span>First Name</span>
+              <span>{t('register.firstName')}</span>
             </Label>
             <Input
               id="firstName"
@@ -200,13 +202,13 @@ export function RegisterForm() {
               required
               value={formData.firstName}
               onChange={handleChange}
-              placeholder="John"
+              placeholder={t('register.firstNamePlaceholder')}
               className="signup-input"
             />
           </div>
           <div className="signup-field-container">
             <Label htmlFor="lastName" className="signup-field-label-simple">
-              Last Name
+              {t('register.lastName')}
             </Label>
             <Input
               id="lastName"
@@ -216,7 +218,7 @@ export function RegisterForm() {
               required
               value={formData.lastName}
               onChange={handleChange}
-              placeholder="Doe"
+              placeholder={t('register.lastNamePlaceholder')}
               className="signup-input"
             />
           </div>
@@ -231,7 +233,7 @@ export function RegisterForm() {
         >
           <Label htmlFor="email" className="signup-field-label">
             <Mail className="signup-field-icon" />
-            <span>Email Address</span>
+            <span>{t('register.email')}</span>
           </Label>
           <Input
             id="email"
@@ -241,7 +243,7 @@ export function RegisterForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            placeholder="john.doe@company.com"
+            placeholder={t('register.emailPlaceholder')}
             className="signup-input"
           />
         </motion.div>
@@ -255,7 +257,7 @@ export function RegisterForm() {
         >
           <Label htmlFor="password" className="signup-field-label">
             <Lock className="signup-field-icon" />
-            <span>Password</span>
+            <span>{t('register.password')}</span>
           </Label>
           <div className="signup-password-container">
             <Input
@@ -266,7 +268,7 @@ export function RegisterForm() {
               required
               value={formData.password}
               onChange={handleChange}
-              placeholder="Create a strong password"
+              placeholder={t('register.passwordPlaceholder')}
               className={`signup-password-input ${
                 formData.password && !isPasswordValid ? "border-red-500 ring-1 ring-red-500" : ""
               }`}
@@ -365,7 +367,7 @@ export function RegisterForm() {
         >
           <Label htmlFor="confirmPassword" className="signup-field-label">
             <Lock className="signup-field-icon" />
-            <span>Confirm Password</span>
+            <span>{t('register.confirmPassword')}</span>
           </Label>
           <div className="signup-password-container">
             <Input
@@ -376,7 +378,7 @@ export function RegisterForm() {
               required
               value={formData.confirmPassword}
               onChange={handleChange}
-              placeholder="Confirm your password"
+              placeholder={t('register.confirmPasswordPlaceholder')}
               className={`signup-password-input ${
                 formData.confirmPassword && !passwordsMatch
                   ? "border-red-500 ring-1 ring-red-500"
@@ -466,11 +468,11 @@ export function RegisterForm() {
             {isLoading ? (
               <>
                 <Loader2 className="signup-loading-spinner" />
-                Creating account...
+                {t('register.loading')}
               </>
             ) : (
               <>
-                Create Account
+                {t('register.submit')}
                 <ArrowRight className="signup-button-arrow" />
               </>
             )}
@@ -490,7 +492,7 @@ export function RegisterForm() {
             <div className="signup-divider-border" />
           </div>
           <div className="signup-divider-text-container">
-            <span className="signup-divider-text">Already have an account?</span>
+            <span className="signup-divider-text">{t('register.alreadyHaveAccount')}</span>
           </div>
         </div>
       </motion.div>
@@ -503,7 +505,7 @@ export function RegisterForm() {
       >
         <Link href="/login">
           <Button variant="outline" className="signup-signin-button">
-            Log In to Existing Account
+            {t('register.signIn')}
             <ArrowRight className="signup-button-arrow" />
           </Button>
         </Link>
