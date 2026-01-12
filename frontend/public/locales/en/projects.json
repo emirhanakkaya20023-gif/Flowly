@@ -19,5 +19,40 @@
   "allProjects": "All Projects",
   "myProjects": "My Projects",
   "calendar": "Calendar",
-  "sprints": "Sprints"
+  "sprints": "Sprints",
+  "analytics": {
+    "title": "Project Analytics",
+    "description": "Insights into your project performance and team productivity",
+    "kpi": {
+      "totalTasks": "Tasks",
+      "completedTasks": "Completed Tasks",
+      "activeSprints": "Active Sprints",
+      "bugResolution": "Bug Resolution",
+      "taskCompletion": "Task Completion",
+      "openBugs": "Open Bugs",
+      "allTasksInProject": "All tasks in project",
+      "successfullyFinished": "Successfully finished",
+      "currentlyRunning": "Currently running",
+      "bugsFixed": "bugs fixed",
+      "overallProgress": "Overall progress",
+      "requiresAttention": "Requiring attention"
+    },
+    "charts": {
+      "taskStatusFlow": "Task Status Flow",
+      "taskStatusFlowDesc": "Current task distribution by status",
+      "taskTypeDistribution": "Task Type Distribution",
+      "taskTypeDistributionDesc": "Types of tasks in this project",
+      "taskPriorityDistribution": "Task Priority Distribution",
+      "taskPriorityDistributionDesc": "Task distribution by priority",
+      "sprintVelocityTrend": "Sprint Velocity Trend",
+      "sprintVelocityTrendDesc": "Sprint completion trend"
+    },
+    "noWidgets": "No widgets to display",
+    "allWidgetsHidden": "All widgets are currently hidden. Use the customize button to show widgets.",
+    "showAllWidgets": "Show All Widgets",
+    "dashboardSettings": "Dashboard Settings",
+    "customizeDashboard": "Customize your dashboard widgets",
+    "noDataAvailable": "No analytics data available for this project.",
+    "loadData": "Load Data"
+  }
 }

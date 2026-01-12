@@ -2,6 +2,7 @@
 import { PieChart, Pie, ResponsiveContainer, Cell, Legend } from "recharts";
 import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { ChartWrapper } from "../chart-wrapper";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface StatusInfo {
   id: string;
@@ -22,6 +23,8 @@ interface TaskStatusChartProps {
 }
 
 export function TaskStatusChart({ data }: TaskStatusChartProps) {
+  const { t } = useTranslation('projects');
+
   // Sort data by status position for better visualization
   const safeData = Array.isArray(data) ? data : [];
   const sortedData = [...safeData].sort(
@@ -75,8 +78,8 @@ export function TaskStatusChart({ data }: TaskStatusChartProps) {
 
   return (
     <ChartWrapper
-      title="Task Status Flow"
-      description="Current task distribution by status"
+      title={t('analytics.charts.taskStatusFlow')}
+      description={t('analytics.charts.taskStatusFlowDesc')}
       config={chartConfig}
       className="border-[var(--border)]"
     >

@@ -19,5 +19,40 @@
   "allProjects": "Tüm Projeler",
   "myProjects": "Projelerim",
   "calendar": "Takvim",
-  "sprints": "Sprint'ler"
+  "sprints": "Sprint'ler",
+  "analytics": {
+    "title": "Proje Analitikleri",
+    "description": "Proje performansınız ve ekip verimliliğiniz hakkında bilgiler",
+    "kpi": {
+      "totalTasks": "Görevler",
+      "completedTasks": "Tamamlanan Görevler",
+      "activeSprints": "Aktif Sprint'ler",
+      "bugResolution": "Hata Çözümü",
+      "taskCompletion": "Görev Tamamlama",
+      "openBugs": "Açık Hatalar",
+      "allTasksInProject": "Projedeki tüm görevler",
+      "successfullyFinished": "Başarıyla tamamlandı",
+      "currentlyRunning": "Şu anda devam ediyor",
+      "bugsFixed": "hata düzeltildi",
+      "overallProgress": "Genel ilerleme",
+      "requiresAttention": "Dikkat gerektiriyor"
+    },
+    "charts": {
+      "taskStatusFlow": "Görev Durum Akışı",
+      "taskStatusFlowDesc": "Mevcut görev dağılımı duruma göre",
+      "taskTypeDistribution": "Görev Türü Dağılımı",
+      "taskTypeDistributionDesc": "Bu projedeki görev türleri",
+      "taskPriorityDistribution": "Görev Öncelik Dağılımı",
+      "taskPriorityDistributionDesc": "Önceliğe göre görev dağılımı",
+      "sprintVelocityTrend": "Sprint Hız Trendi",
+      "sprintVelocityTrendDesc": "Sprint tamamlama eğilimi"
+    },
+    "noWidgets": "Görüntülenecek widget yok",
+    "allWidgetsHidden": "Tüm widget'lar şu anda gizli. Widget'ları göstermek için özelleştir butonunu kullanın.",
+    "showAllWidgets": "Tüm Widget'ları Göster",
+    "dashboardSettings": "Panel Ayarları",
+    "customizeDashboard": "Panel widget'larınızı özelleştirin",
+    "noDataAvailable": "Bu proje için analitik verisi mevcut değil.",
+    "loadData": "Verileri Yükle"
+  }
 }

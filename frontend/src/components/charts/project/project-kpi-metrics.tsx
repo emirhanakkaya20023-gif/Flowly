@@ -1,5 +1,7 @@
 import { StatCard } from "@/components/common/StatCard";
 import { CheckCircle, AlertTriangle, TrendingUp, Bug, Zap } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+
 interface ProjectKPIMetricsProps {
   data: {
     totalTasks: number;
@@ -13,43 +15,44 @@ interface ProjectKPIMetricsProps {
 }
 
 export function ProjectKPIMetrics({ data }: ProjectKPIMetricsProps) {
+  const { t } = useTranslation('projects');
   const kpiCards = [
     {
-      title: "Total Tasks",
-      label: "Tasks", // 👈 Added
+      title: t('analytics.kpi.totalTasks'),
+      label: t('analytics.kpi.totalTasks'),
       value: data?.totalTasks,
-      description: "All tasks in project",
+      description: t('analytics.kpi.allTasksInProject'),
       icon: <CheckCircle className="h-4 w-4" />,
       color: "text-blue-600",
       bgColor: "bg-blue-50",
     },
     {
-      title: "Completed Tasks",
-      label: "Completed Tasks", // 👈 Added
+      title: t('analytics.kpi.completedTasks'),
+      label: t('analytics.kpi.completedTasks'),
       value: data?.completedTasks,
-      description: "Successfully finished",
+      description: t('analytics.kpi.successfullyFinished'),
       icon: <CheckCircle className="h-4 w-4" />,
     },
     {
-      title: "Active Sprints",
-      label: "Active Sprints", // 👈 Added
+      title: t('analytics.kpi.activeSprints'),
+      label: t('analytics.kpi.activeSprints'),
       value: data?.activeSprints,
-      description: "Currently running",
+      description: t('analytics.kpi.currentlyRunning'),
       icon: <Zap className="h-4 w-4" />,
       color: "text-purple-600",
     },
     {
-      title: "Bug Resolution",
-      label: "Bug Resolution", // 👈 Added
+      title: t('analytics.kpi.bugResolution'),
+      label: t('analytics.kpi.bugResolution'),
       value: `${data?.bugResolutionRate.toFixed(1)}%`,
-      description: `${data?.resolvedBugs}/${data?.totalBugs} bugs fixed`,
+      description: `${data?.resolvedBugs}/${data?.totalBugs} ${t('analytics.kpi.bugsFixed')}`,
       icon: <Bug className="h-4 w-4" />,
     },
     {
-      title: "Task Completion",
-      label: "Task Completion", // 👈 Added
+      title: t('analytics.kpi.taskCompletion'),
+      label: t('analytics.kpi.taskCompletion'),
       value: `${data?.completionRate.toFixed(1)}%`,
-      description: "Overall progress",
+      description: t('analytics.kpi.overallProgress'),
       icon:
         data?.completionRate > 75 ? (
           <TrendingUp className="h-4 w-4" />
@@ -58,10 +61,10 @@ export function ProjectKPIMetrics({ data }: ProjectKPIMetricsProps) {
         ),
     },
     {
-      title: "Open Bugs",
-      label: "Open Bugs", // 👈 Added
+      title: t('analytics.kpi.openBugs'),
+      label: t('analytics.kpi.openBugs'),
       value: data?.totalBugs - data?.resolvedBugs,
-      description: "Requiring attention",
+      description: t('analytics.kpi.requiresAttention'),
       icon:
         data?.totalBugs - data?.resolvedBugs === 0 ? (
           <CheckCircle className="h-4 w-4" />

@@ -7,6 +7,7 @@ import {
   ChartLegendContent,
 } from "@/components/ui/chart";
 import { ChartWrapper } from "../chart-wrapper";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const chartConfig = {
   STORY: { label: "Story", color: "#10B981" },
@@ -21,6 +22,8 @@ interface TaskTypeChartProps {
 }
 
 export function TaskTypeChart({ data }: TaskTypeChartProps) {
+  const { t } = useTranslation('projects');
+
   const safeData = Array.isArray(data) ? data : [];
   const chartData = safeData.map((item) => ({
     name: chartConfig[item.type as keyof typeof chartConfig]?.label || item.type,
@@ -37,8 +40,8 @@ export function TaskTypeChart({ data }: TaskTypeChartProps) {
 
   return (
     <ChartWrapper
-      title="Task Type Distribution"
-      description="Types of tasks in this project"
+      title={t('analytics.charts.taskTypeDistribution')}
+      description={t('analytics.charts.taskTypeDistributionDesc')}
       config={chartConfig}
       className="border-[var(--border)]"
     >
