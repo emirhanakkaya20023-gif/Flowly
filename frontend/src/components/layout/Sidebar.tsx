@@ -244,24 +244,24 @@ export default function Sidebar() {
   const defaultProjectNavItems = useMemo(
     () => [
       {
-        name: "Overview",
+        name: t("projects.overview") || "Overview",
         href: `/${currentWorkspaceSlug || ""}/${currentProjectSlug || ""}`,
         icon: <HiViewBoards size={16} />,
-        title: "Project Overview",
+        title: t("projects.overview") || "Project Overview",
         disabled: false, // usually for unauthenticated users
       },
       {
-        name: "Tasks",
+        name: t("common.navigation.tasks") || "Tasks",
         href: `/${currentWorkspaceSlug || ""}/${currentProjectSlug || ""}/tasks`,
         icon: <HiClipboardList size={16} />,
-        title: "Tasks",
+        title: t("common.navigation.tasks") || "Tasks",
         disabled: false,
       },
       {
-        name: "Sprints",
+        name: t("projects.sprints") || "Sprints",
         href: `/${currentWorkspaceSlug || ""}/${currentProjectSlug || ""}/sprints`,
         icon: <HiLightningBolt size={16} />,
-        title: "Sprints",
+        title: t("projects.sprints") || "Sprints",
         disabled: false,
       },
       // {
@@ -279,7 +279,7 @@ export default function Sidebar() {
       //   disabled: false,
       // },
     ],
-    [currentWorkspaceSlug, currentProjectSlug]
+    [currentWorkspaceSlug, currentProjectSlug, t]
   );
 
   const projectNavItems = useMemo(() => {
@@ -292,50 +292,50 @@ export default function Sidebar() {
     return currentWorkspaceSlug && currentProjectSlug
       ? [
           {
-            name: "Overview",
+            name: t("projects.overview") || "Overview",
             href: `/${currentWorkspaceSlug}/${currentProjectSlug}`,
             icon: <HiViewBoards size={16} />,
-            title: "Project Overview",
+            title: t("projects.overview") || "Project Overview",
             disabled: false,
           },
           {
-            name: "Tasks",
+            name: t("common.navigation.tasks") || "Tasks",
             href: `/${currentWorkspaceSlug}/${currentProjectSlug}/tasks`,
             icon: <HiClipboardList size={16} />,
-            title: "Tasks",
+            title: t("common.navigation.tasks") || "Tasks",
             disabled: false,
           },
           {
-            name: "Sprints",
+            name: t("projects.sprints") || "Sprints",
             href: `/${currentWorkspaceSlug}/${currentProjectSlug}/sprints`,
             icon: <HiLightningBolt size={16} />,
-            title: "Sprints",
+            title: t("projects.sprints") || "Sprints",
             disabled: false,
           },
           {
-            name: "Calendar",
+            name: t("projects.calendar") || "Calendar",
             href: `/${currentWorkspaceSlug}/${currentProjectSlug}/calendar`,
             icon: <HiCalendar size={16} />,
-            title: "Calendar",
+            title: t("projects.calendar") || "Calendar",
             disabled: false,
           },
           {
-            name: "Members",
+            name: t("projects.members") || "Members",
             href: `/${currentWorkspaceSlug}/${currentProjectSlug}/members`,
             icon: <HiUsers size={16} />,
-            title: "Members",
+            title: t("projects.members") || "Members",
             disabled: false,
           },
           {
-            name: "Settings",
+            name: t("common.navigation.settings") || "Settings",
             href: `/${currentWorkspaceSlug}/${currentProjectSlug}/settings`,
             icon: <HiCog size={16} />,
-            title: "Settings",
+            title: t("common.navigation.settings") || "Settings",
             disabled: false,
           },
         ]
       : [];
-  }, [currentWorkspaceSlug, currentProjectSlug, isAuth, defaultProjectNavItems]);
+  }, [currentWorkspaceSlug, currentProjectSlug, isAuth, defaultProjectNavItems, t]);
 
   const navigationItems: NavItem[] = useMemo(() => {
     // For unauthenticated users, always show project navigation (disabled)
